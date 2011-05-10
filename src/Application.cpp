@@ -11,20 +11,44 @@ void Application::setup() {
     ofSetWindowTitle("Tunnel");
     
     tunnel.initialize(WIDTH, HEIGHT, &m);    
-    speed = 100;
+    speed = 0.9*MIN_SPEED;
+    rot = 0;
 }
 
 //--------------------------------------------------------------
 void Application::draw() {
     tunnel.draw(speed);
-    
     g.drawCrossHairs();
+    
+    //Draw Speed Bar
+    ofPushMatrix();
+        ofSetColor(255, 255, 255);
+        ofSetColor(255,255,255);
+        ofNoFill();
+        ofTranslate(20, 10*HEIGHT/11);
+        ofDrawBitmapString("Speed", 0, -5);
+        ofBeginShape();
+            ofVertex(0,0);
+            ofVertex(0,HEIGHT/80);
+            ofVertex(WIDTH/3, HEIGHT/80);
+            ofVertex(WIDTH/3, 0);
+            ofVertex(0, 0);
+        ofEndShape();
+        ofSetColor(55,100,200);
+        ofFill();
+        int m = WIDTH/3 - 4;
+        ofBeginShape();
+            ofVertex(3,3);
+            ofVertex(3,HEIGHT/80-3);
+            ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, HEIGHT/80-3);
+            ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, 3);
+            ofVertex(3, 3);
+        ofEndShape();
+    ofPopMatrix();
     
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
     ofDrawBitmapString(fpsStr, 100,500);
-    fpsStr = "speed: "+ofToString(speed, 2);
-    ofDrawBitmapString(fpsStr, 100,600);
 }
 
 //--------------------------------------------------------------
@@ -49,11 +73,19 @@ void Application::keyPressed(int key) {
             break;
         case 'w':
         case 'W':
-            speed>10?speed-=10:0;
+            speed>MAX_SPEED?speed-=10:0;
             break;
         case 's':
         case 'S':
-            speed<100?speed+=10:0;
+            speed<0.9*MIN_SPEED?speed+=10:0;
+            break;
+        case 'a':
+        case 'A':
+            rot+=10;
+            break;
+        case 'd':
+        case 'D':
+            rot-=10;
             break;
         default:
             break;
@@ -80,5 +112,4 @@ void Application::mouseReleased(int x, int y, int button) {
 
 //--------------------------------------------------------------
 void Application::windowResized(int w, int h) {
-    
 }

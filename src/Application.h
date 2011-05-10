@@ -9,6 +9,9 @@
 #define WIDTH 1024
 #define HEIGHT 768
 
+#define MAX_SPEED 10
+#define MIN_SPEED 100
+
 class Application : public ofBaseApp{
 public:
     void setup();
@@ -28,6 +31,7 @@ private:
     Gun g;
     
     int speed;
+    int rot;
 };
 
 #endif

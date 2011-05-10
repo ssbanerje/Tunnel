@@ -46,6 +46,7 @@ void Tunnel::drawQuad(float a, float da, float z, float dz) {
         ofVertex(v[1].x, v[1].y);
         ofVertex(v[2].x, v[2].y);
         ofVertex(v[3].x, v[3].y);
+        ofVertex(v[0].x, v[0].y);
     ofEndShape();
 }
 
