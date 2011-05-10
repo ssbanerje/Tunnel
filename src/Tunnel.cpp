@@ -43,7 +43,7 @@ void Tunnel::drawQuad(float a, float da, float z, float dz) {
         ofVertex(v[3].x, v[3].y);
     ofEndShape();
     ofNoFill();
-    ofSetColor(100,100,255);
+    ofSetColor(100,100,255,50);
     ofBeginShape();
         ofVertex(v[0].x, v[0].y);
         ofVertex(v[1].x, v[1].y);
