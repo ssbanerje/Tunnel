@@ -1,5 +1,10 @@
 #include "Gun.h"
 
+Gun::Gun() {
+    ofLog(OF_LOG_VERBOSE, "Gun::Gun()");
+    mouseSize = 3;
+}
+
 //--------------------------------------------------------------
 void Gun::drawCrossHairs() {
     ofSetColor(255,0,0);

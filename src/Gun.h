@@ -8,7 +8,7 @@ private:
     ofPoint mousePos;
     int mouseSize;
 public:
-    Gun() {mouseSize = 5;}
+    Gun();
     void setMousePos(int x,int y) {mousePos.set(x,y,0);}
     void incCHSize() {mouseSize<15?mouseSize++:1;}
     void decCHSize() {mouseSize>2?mouseSize--:1;}
