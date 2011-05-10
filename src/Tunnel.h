@@ -29,7 +29,7 @@ public:
     Tunnel() {}
     ~Tunnel() {}
     void initialize(int w, int h, Math *m);
-    void draw();
+    void draw(int speed);
 };
 
 #endif

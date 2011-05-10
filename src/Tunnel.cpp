@@ -50,8 +50,8 @@ void Tunnel::drawQuad(float a, float da, float z, float dz) {
 }
 
 //--------------------------------------------------------------
-void Tunnel::draw() {
-    t += 1/30.0;
+void Tunnel::draw(int speed) {
+    t += 1/30.0 + 1.0/speed;
     ofSetColor(255,0,0);
     float a,da,dz,fog,k;
     int n;

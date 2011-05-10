@@ -26,6 +26,8 @@ private:
     Math m;
     Tunnel tunnel;
     Gun g;
+    
+    int speed;
 };
 
 #endif
