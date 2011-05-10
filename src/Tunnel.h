@@ -15,6 +15,9 @@ private:
     ofPoint getSurface(float a, float z);
     void drawQuad(float a, float da, float z, float dz);
     
+    float max(float x, float y) {return x>y?x:y;}
+    float abs(float x) {return x<0?-x:x;} 
+    
 public:
     Tunnel() {}
     ~Tunnel() {}
