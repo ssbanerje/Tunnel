@@ -4,8 +4,8 @@
 #include "ofMain.h"
 #include "Tunnel.h"
 
-#define WIDTH 800
-#define HEIGHT 600
+#define WIDTH 1024
+#define HEIGHT 768
 
 class Application : public ofBaseApp{
 public:

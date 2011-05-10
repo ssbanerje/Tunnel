@@ -63,7 +63,7 @@ void Tunnel::draw() {
     da = TWO_PI/n;
     dz = 0.25;
     int *x = (int*)&k;
-    for (register float zz=z+8; zz>z; zz-=dz) {
+    for (register float zz=z+DEPTH_OF_TUNNEL; zz>z; zz-=dz) {
         for (register int i=0; i<n; i++) {
             fog = 1/max((zz+0.7)-3,1);
             if (zz <= 2) 

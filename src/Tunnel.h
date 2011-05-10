@@ -5,6 +5,7 @@
 #include <math.h>
 
 #define ARR_LEN 1000
+#define DEPTH_OF_TUNNEL 8
 
 class Tunnel {
 private:
