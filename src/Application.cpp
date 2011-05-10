@@ -3,7 +3,6 @@
 //--------------------------------------------------------------
 Application::~Application() {
 	ofLog(OF_LOG_VERBOSE, "Application::~Application()");
-    delete tunnel;
 }
 
 //--------------------------------------------------------------
@@ -12,24 +11,25 @@ void Application::setup() {
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
     ofBackground(50, 50, 50);
-    ofSetWindowShape(800, 600);
+    ofSetWindowShape(WIDTH, HEIGHT);
+    ofSetFrameRate(25);
     ofSetWindowTitle("Tunnel");
     
-    tunnel = new Tunnel();    
+    tunnel.setWindowDimensions(WIDTH,HEIGHT);    
 }
 
 //--------------------------------------------------------------
 void Application::draw() {
-    tunnel->draw();
+    tunnel.draw();
 }
 
 //--------------------------------------------------------------
 void Application::update() {
-    tunnel->updateStructure();    
 }
+
 //--------------------------------------------------------------
 void Application::exit() {
-    
+    ofLog(OF_LOG_VERBOSE, "Application::exit()");
 }
 
 //--------------------------------------------------------------

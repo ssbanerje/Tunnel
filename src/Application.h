@@ -1,8 +1,11 @@
-#ifndef __TUNNEL_APPLICATION
-#define __TUNNEL_APPLICATION
+#ifndef __TUNNEL_APPLICATION_INC
+#define __TUNNEL_APPLICATION_INC
 
 #include "ofMain.h"
 #include "Tunnel.h"
+
+#define WIDTH 800
+#define HEIGHT 600
 
 class Application : public ofBaseApp{
 public:
@@ -17,11 +20,10 @@ public:
 	void mouseReleased(int x,int y,int button);
 	void windowResized(int w,int h);
     
-    Application() {};
     ~Application();
     
 private:
-    Tunnel *tunnel;
+    Tunnel tunnel;
 };
 
 #endif
