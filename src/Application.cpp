@@ -6,10 +6,8 @@ void Application::setup() {
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
     ofBackground(0,0,0);
-    ofSetColor(255,255,255);
     ofSetWindowShape(WIDTH, HEIGHT);
     ofSetFrameRate(21);
-    ofEnableSmoothing();
     ofSetWindowTitle("Tunnel");
     
     tunnel.initialize(WIDTH, HEIGHT);    

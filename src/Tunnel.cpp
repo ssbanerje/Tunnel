@@ -75,8 +75,10 @@ void Tunnel::draw() {
             ofSetColor(k, k, k);
             drawQuad(a, da, zz, dz);
             if(i%3==0) {
-                ofSetColor(0, 0, 0);
-                drawQuad(a, da/10, z, dz/10);
+                ofSetColor(255, 200, 255);
+                drawQuad(a, da/10, zz, dz);
+                drawQuad(a, da, zz, dz/10);
+
             }
             a += da;
         }
