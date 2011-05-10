@@ -3,7 +3,7 @@
 
 #include <math.h>
 
-#include "ofMain.h"
+#include "ofGraphics.h"
 #include "Math.h"
 
 #define DEPTH_OF_TUNNEL 8.5

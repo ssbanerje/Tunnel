@@ -16,7 +16,10 @@ void Application::setup() {
 //--------------------------------------------------------------
 void Application::draw() {
     tunnel.draw();
-    ofSetColor(255,255,255);
+    
+    g.drawCrossHairs();
+    
+    ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
     ofDrawBitmapString(fpsStr, 100,500);
 }
@@ -32,12 +35,23 @@ void Application::exit() {
 
 //--------------------------------------------------------------
 void Application::keyPressed(int key) {
-    
+    switch (key) {
+        case '+':
+        case '=':
+            g.incCHSize();
+            break;
+        case '_':
+        case '-':
+            g.decCHSize();
+            break;
+        default:
+            break;
+    }
 }
 
 //--------------------------------------------------------------
 void Application::mouseMoved(int x, int y ) {
-    
+    g.setMousePos(x,y);
 }
 
 //--------------------------------------------------------------

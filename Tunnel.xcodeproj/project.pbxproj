@@ -36,6 +36,7 @@
 		F78B2AB2137918F900F8E58E /* Tunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78B2AB0137918F900F8E58E /* Tunnel.cpp */; };
 		F78B2AB51379198500F8E58E /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78B2AB31379198500F8E58E /* Application.cpp */; };
 		F7DC0055137952F7006E2402 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DC0053137952F7006E2402 /* Math.cpp */; };
+		F7DC005A1379574D006E2402 /* Gun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DC00581379574D006E2402 /* Gun.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,8 @@
 		F78B2AB41379198500F8E58E /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F7DC0053137952F7006E2402 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
 		F7DC0054137952F7006E2402 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		F7DC00581379574D006E2402 /* Gun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gun.cpp; sourceTree = "<group>"; };
+		F7DC00591379574D006E2402 /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -349,12 +352,14 @@
 			isa = PBXGroup;
 			children = (
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				F78B2AB0137918F900F8E58E /* Tunnel.cpp */,
-				F78B2AB1137918F900F8E58E /* Tunnel.h */,
 				F78B2AB31379198500F8E58E /* Application.cpp */,
 				F78B2AB41379198500F8E58E /* Application.h */,
 				F7DC0053137952F7006E2402 /* Math.cpp */,
 				F7DC0054137952F7006E2402 /* Math.h */,
+				F78B2AB0137918F900F8E58E /* Tunnel.cpp */,
+				F78B2AB1137918F900F8E58E /* Tunnel.h */,
+				F7DC00581379574D006E2402 /* Gun.cpp */,
+				F7DC00591379574D006E2402 /* Gun.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -527,6 +532,7 @@
 				F78B2AB2137918F900F8E58E /* Tunnel.cpp in Sources */,
 				F78B2AB51379198500F8E58E /* Application.cpp in Sources */,
 				F7DC0055137952F7006E2402 /* Math.cpp in Sources */,
+				F7DC005A1379574D006E2402 /* Gun.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

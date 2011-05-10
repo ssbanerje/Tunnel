@@ -3,6 +3,7 @@
 
 #include "ofMain.h"
 #include "Tunnel.h"
+#include "Gun.h"
 #include "Math.h"
 
 #define WIDTH 1024
@@ -22,8 +23,9 @@ public:
 	void windowResized(int w,int h);
     
 private:
-    Tunnel tunnel;
     Math m;
+    Tunnel tunnel;
+    Gun g;
 };
 
 #endif
