@@ -1,16 +1,13 @@
 #include "Tunnel.h"
 
 //--------------------------------------------------------------
-void Tunnel::initialize(int w, int h) {
+void Tunnel::initialize(int w, int h, Math *m) {
     ofLog(OF_LOG_VERBOSE, "Tunnel::initialize(%d, %d)",w,h);
     width = w;
     height = h;
     t = 0;
     z = -0.2;
-    for (register int i=0; i<ARR_LEN; i++) {
-        sinArr[i] = sinf(TWO_PI/ARR_LEN * i);
-        cosArr[i] = cosf(TWO_PI/ARR_LEN * i);
-    }
+    this->m = m;
 }
 
 //--------------------------------------------------------------
@@ -24,10 +21,10 @@ ofPoint Tunnel::getPoint(float x, float y, float z) {
 ofPoint Tunnel::getSurface(float a, float z) {
     register float r = width/10.0;
 	register float R = width/3.0;
-	register float b = -20*cosLookup(a*5 + t);
+	register float b = -20*m->cosLookup(a*5 + t);
 	return getPoint(
-             width/2 + (R * cosLookup(a) + r*sinLookup(z + 2*t))/z + cosLookup(a)*b, 
-             height/2 + (R * sinLookup(a))/z + sinLookup(a)*b,
+             width/2 + (R * m->cosLookup(a) + r*m->sinLookup(z + 2*t))/z + m->cosLookup(a)*b, 
+             height/2 + (R * m->sinLookup(a))/z + m->sinLookup(a)*b,
              z);
 }
 
@@ -43,7 +40,7 @@ void Tunnel::drawQuad(float a, float da, float z, float dz) {
         ofVertex(v[3].x, v[3].y);
     ofEndShape();
     ofNoFill();
-    ofSetColor(100,100,255,50);
+    ofSetColor(100,100,255,100);
     ofBeginShape();
         ofVertex(v[0].x, v[0].y);
         ofVertex(v[1].x, v[1].y);
@@ -68,15 +65,15 @@ void Tunnel::draw() {
             fog = 1/max((zz+0.7)-3,1);
             if (zz <= 2) 
                 fog = max(0, (zz*zz)/4);
-            k = (205*(fog*abs( sinLookup(i/n*2*PI+t) )));
+            k = (205*(fog*abs( m->sinLookup(i/n*2*PI+t) )));
             *x >>= 0;
-            k *= (0.55+0.45*cosLookup((i/n+0.25)*PI*5));
+            k *= (0.55+0.45*m->cosLookup((i/n+0.25)*PI*5));
             *x >>= 0;
             ofSetColor(k, k, k);
             drawQuad(a, da, zz, dz);
             if(i%3==0) {
-                ofSetColor(255, 200, 255);
-                drawQuad(a, da/10, zz, dz);
+                ofSetColor(255, 0, 255);
+                drawQuad(a, da/30, zz, dz);
                 drawQuad(a, da, zz, dz/10);
 
             }
@@ -86,18 +83,4 @@ void Tunnel::draw() {
     z -= 0.05;
     if(z <= dz)
         z += dz;
-}
-
-//--------------------------------------------------------------
-float Tunnel::sinLookup(float x) {
-    int r = (int) (x/TWO_PI);
-    x -= r*TWO_PI;
-    return sinArr[(int)(x/TWO_PI*ARR_LEN)];
-}
-
-//--------------------------------------------------------------
-float Tunnel::cosLookup(float x) {
-    int r = (int) (x/TWO_PI);
-    x -= r*TWO_PI;
-    return cosArr[(int)(x/TWO_PI*ARR_LEN)];
 }

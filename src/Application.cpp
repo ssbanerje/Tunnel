@@ -7,10 +7,10 @@ void Application::setup() {
     
     ofBackground(0,0,0);
     ofSetWindowShape(WIDTH, HEIGHT);
-    ofSetFrameRate(21);
+    ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
-    tunnel.initialize(WIDTH, HEIGHT);    
+    tunnel.initialize(WIDTH, HEIGHT, &m);    
 }
 
 //--------------------------------------------------------------

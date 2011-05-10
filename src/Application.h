@@ -3,6 +3,7 @@
 
 #include "ofMain.h"
 #include "Tunnel.h"
+#include "Math.h"
 
 #define WIDTH 1024
 #define HEIGHT 768
@@ -22,6 +23,7 @@ public:
     
 private:
     Tunnel tunnel;
+    Math m;
 };
 
 #endif

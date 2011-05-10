@@ -1,11 +1,12 @@
 #ifndef __TUNNEL_INC
 #define __TUNNEL_INC
 
-#include "ofMain.h"
 #include <math.h>
 
-#define ARR_LEN 1000
-#define DEPTH_OF_TUNNEL 8
+#include "ofMain.h"
+#include "Math.h"
+
+#define DEPTH_OF_TUNNEL 8.5
 
 class Tunnel {
 private:
@@ -13,8 +14,7 @@ private:
     int height;
     float t;
     float z;
-    float sinArr[ARR_LEN];
-    float cosArr[ARR_LEN];
+    Math *m;
     
     ofPoint getPoint(float x, float y, float z);
     ofPoint getSurface(float a, float z);
@@ -28,7 +28,7 @@ private:
 public:
     Tunnel() {}
     ~Tunnel() {}
-    void initialize(int w, int h);
+    void initialize(int w, int h, Math *m);
     void draw();
 };
 
