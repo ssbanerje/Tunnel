@@ -52,9 +52,10 @@ void Tunnel::drawQuad(float a, float da, float z, float dz) {
 
 //--------------------------------------------------------------
 void Tunnel::draw(int speed) {
-    t += 1/30.0 + 1.0/speed;
+    t += 1/30.0 + 2.0/speed;
     ofSetColor(255,0,0);
-    float a,da,dz,fog,k;
+    float a,da,dz,fog;
+    int k;
     int n;
     n = 30;
     a = 0;
@@ -66,17 +67,14 @@ void Tunnel::draw(int speed) {
             fog = 1/max((zz+0.7)-3,1);
             if (zz <= 2) 
                 fog = max(0, (zz*zz)/4);
-            k = (205*(fog*abs( m->sinLookup(i/n*2*PI+t) )));
-            *x >>= 0;
+            k = (int)(205*(fog*abs( m->sinLookup(i/n*2*PI+t) ))) >> 0;
             k *= (0.55+0.45*m->cosLookup((i/n+0.25)*PI*5));
-            *x >>= 0;
+            k = k >> 0;
             ofSetColor(k, k, k);
             drawQuad(a, da, zz, dz);
-            if(i%3==0) {
+            if(i%5==0) {
                 ofSetColor(255, 0, 255);
-                drawQuad(a, da/30, zz, dz);
-                drawQuad(a, da, zz, dz/10);
-
+                drawQuad(a, da/20, zz, dz);
             }
             a += da;
         }
