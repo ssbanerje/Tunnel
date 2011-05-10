@@ -10,17 +10,22 @@ void Application::setup() {
     ofSetLogLevel(0);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
-    ofBackground(50, 50, 50);
+    ofBackground(0,0,0);
+    ofSetColor(255,255,255);
     ofSetWindowShape(WIDTH, HEIGHT);
-    ofSetFrameRate(25);
+    ofSetFrameRate(21);
+    ofEnableSmoothing();
     ofSetWindowTitle("Tunnel");
     
-    tunnel.setWindowDimensions(WIDTH,HEIGHT);    
+    tunnel.initialize(WIDTH, HEIGHT);    
 }
 
 //--------------------------------------------------------------
 void Application::draw() {
     tunnel.draw();
+    ofSetColor(255,255,255);
+    string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+    ofDrawBitmapString(fpsStr, 100,500);
 }
 
 //--------------------------------------------------------------

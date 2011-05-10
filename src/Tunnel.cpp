@@ -1,7 +1,8 @@
 #include "Tunnel.h"
 
 //--------------------------------------------------------------
-void Tunnel::setWindowDimensions(int w, int h) {
+void Tunnel::initialize(int w, int h) {
+    ofLog(OF_LOG_VERBOSE, "Tunnel::initialize(%d, %d)",w,h);
     width = w;
     height = h;
     t = 0;
@@ -17,9 +18,9 @@ ofPoint Tunnel::getPoint(float x, float y, float z) {
 
 //--------------------------------------------------------------
 ofPoint Tunnel::getSurface(float a, float z) {
-    float r = width/10.0;
-	float R = width/3.0;
-	float b = -20*cos(a*5 + t);
+    register float r = width/10.0;
+	register float R = width/3.0;
+	register float b = -20*cos(a*5 + t);
 	return getPoint(
              width/2 + (R * cos(a) + r*sin(z + 2*t))/z + cos(a)*b, 
              height/2 + (R * sin(a))/z + sin(a)*b,
@@ -30,20 +31,27 @@ ofPoint Tunnel::getSurface(float a, float z) {
 void Tunnel::drawQuad(float a, float da, float z, float dz) {
     ofPoint v[4] = {getSurface(a, z), getSurface(a+da, z),
         getSurface(a+da, z+dz), getSurface(a, z+dz)};
-    //ofTranslate(v[0].x, v[0].y);
+    ofFill();
     ofBeginShape();
         ofVertex(v[0].x, v[0].y);
         ofVertex(v[1].x, v[1].y);
         ofVertex(v[2].x, v[2].y);
         ofVertex(v[3].x, v[3].y);
     ofEndShape();
-    ofFill();
+    ofNoFill();
+    ofSetColor(100,100,255);
+    ofBeginShape();
+        ofVertex(v[0].x, v[0].y);
+        ofVertex(v[1].x, v[1].y);
+        ofVertex(v[2].x, v[2].y);
+        ofVertex(v[3].x, v[3].y);
+    ofEndShape();
 }
 
 //--------------------------------------------------------------
 void Tunnel::draw() {
     t += 1/30.0;
-    ofSetColor(0xf00);
+    ofSetColor(255,0,0);
     float a,da,dz,fog,k;
     int n;
     n = 30;
@@ -51,7 +59,7 @@ void Tunnel::draw() {
     da = TWO_PI/n;
     dz = 0.25;
     int *x = (int*)&k;
-    for (register float zz=z+8; zz>z; z-=dz) {
+    for (register float zz=z+8; zz>z; zz-=dz) {
         for (register int i=0; i<n; i++) {
             fog = 1/max((zz+0.7)-3,1);
             if (zz <= 2) 

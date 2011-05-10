@@ -21,7 +21,7 @@ private:
 public:
     Tunnel() {}
     ~Tunnel() {}
-    void setWindowDimensions(int w, int h);
+    void initialize(int w, int h);
     void draw();
 };
 
