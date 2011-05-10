@@ -20,8 +20,6 @@ public:
 	void mouseReleased(int x,int y,int button);
 	void windowResized(int w,int h);
     
-    ~Application();
-    
 private:
     Tunnel tunnel;
 };

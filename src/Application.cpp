@@ -1,11 +1,6 @@
 #include "Application.h"
 
 //--------------------------------------------------------------
-Application::~Application() {
-	ofLog(OF_LOG_VERBOSE, "Application::~Application()");
-}
-
-//--------------------------------------------------------------
 void Application::setup() {
     ofSetLogLevel(0);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
