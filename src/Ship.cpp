@@ -27,7 +27,10 @@ void Ship::initialize(Math *m) {
 
 //--------------------------------------------------------------
 void Ship::drawCrossHairs() {
-    ofSetColor(255,0,0);
+    if((mousePos.x-WIDTH/2)*(mousePos.x-WIDTH/2) + (mousePos.y-HEIGHT/2)*(mousePos.y-HEIGHT/2) < 1.0/speed*1e6)
+        ofSetColor(255,0,0);
+    else
+        ofSetColor(255, 255, 0);
     ofCircle(mousePos.x, mousePos.y, mouseSize*3);
     ofCircle(mousePos.x, mousePos.y, mouseSize);
     int x = mouseSize*4;

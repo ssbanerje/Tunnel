@@ -27,6 +27,8 @@ void Application::draw() {
     
     ship.drawControlPanel();
     
+    ship.drawCrossHairs();
+    
     //Draw FPS
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
