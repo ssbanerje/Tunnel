@@ -16,6 +16,8 @@ public:
     Math();
     float sinLookup(float x);
     float cosLookup(float x);
+    float sinLookupD(float x);
+    float cosLookupD(float x);
 };
 
 

@@ -22,3 +22,13 @@ float Math::cosLookup(float x) {
     x -= r*TWO_PI;
     return cosArr[(int)(x/TWO_PI*ARR_LEN)];
 }
+
+//--------------------------------------------------------------
+float Math::sinLookupD(float x) {
+    return sinLookup(x*TWO_PI/360);
+}
+
+//--------------------------------------------------------------
+float Math::cosLookupD(float x) {
+    return cosLookup(x*TWO_PI/360);
+}

@@ -13,12 +13,16 @@ void Application::setup() {
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     
+    glLoadIdentity();
+    
     tunnel.initialize(WIDTH, HEIGHT, &m);
+    ship.initialize(&m);
 }
 
 //--------------------------------------------------------------
-void Application::draw() {
+void Application::draw() {    
     tunnel.draw(ship.getSpeed());
+    
     ship.drawShip();
     
     ship.drawControlPanel();
@@ -26,7 +30,7 @@ void Application::draw() {
     //Draw FPS
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
-    ofDrawBitmapString(fpsStr, 100,500);
+    ofDrawBitmapString(fpsStr, 100,750);
 }
 
 //--------------------------------------------------------------

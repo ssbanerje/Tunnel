@@ -6,10 +6,13 @@ GLfloat lightOneColor[] = {0.99, 0.99, 0.99, 1.0};
 GLfloat lightTwoPosition[] = {-40.0, 40, 100.0, 0.0};
 GLfloat lightTwoColor[] = {WIDTH,HEIGHT,0};
 
-Ship::Ship() {
-    ofLog(OF_LOG_VERBOSE, "Gun::Gun()");
+void Ship::initialize(Math *m) {
+    ofLog(OF_LOG_VERBOSE, "Ship::initialize()");
     mouseSize = 3;
+    
     speed = 0.9*MIN_SPEED;
+    rot = 0;
+    
     model.loadModel("fighter1.3ds");
     
     glLightfv(GL_LIGHT0, GL_POSITION, lightOnePosition);
@@ -38,9 +41,11 @@ void Ship::drawShip() {
     
     ofPushMatrix();
     ofPushStyle();
-        ofTranslate(400, 400);
+        ofTranslate(WIDTH/2, HEIGHT/2+speed);
+    
         ofRotate(90, 0, -1, 0); 
         ofRotate(180, 0, 0, -1);
+    ofRotate(rot, 1, 0, 0);
         glScalef(10, 10, 10);
         model.draw();
     ofPopStyle();
@@ -97,7 +102,7 @@ void Ship::drawControlPanel() {
         ofSetColor(55, 100, 200);
         ofRotateZ(rot);
         ofSetLineWidth(3);
-        ofLine(0, -25, 0, 25);
+        ofLine(-25, 0, 25, 0);
         ofSetLineWidth(1);
     ofPopStyle();
     ofPopMatrix();
