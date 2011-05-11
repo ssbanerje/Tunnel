@@ -9,6 +9,7 @@ GLfloat lightTwoColor[] = {WIDTH,HEIGHT,0};
 void Ship::initialize(Math *m) {
     ofLog(OF_LOG_VERBOSE, "Ship::initialize()");
     mouseSize = 3;
+    this->m = m;
     
     speed = 0.9*MIN_SPEED;
     rot = 0;
@@ -41,12 +42,13 @@ void Ship::drawShip() {
     
     ofPushMatrix();
     ofPushStyle();
-        ofTranslate(WIDTH/2, HEIGHT/2+speed);
-    
+        ofTranslate(WIDTH/2, HEIGHT/2);
         ofRotate(90, 0, -1, 0); 
         ofRotate(180, 0, 0, -1);
-    ofRotate(rot, 1, 0, 0);
-        glScalef(10, 10, 10);
+        ofRotate(180, 0, 0, 1);
+        glTranslatef(0, speed*m->cosLookup(TWO_PI*rot/360)*5, speed*m->sinLookup(TWO_PI*rot/360)*5);
+        ofRotate(rot, 1, 0, 0);
+        glScalef(10, -10, 10);
         model.draw();
     ofPopStyle();
     ofPopMatrix();
