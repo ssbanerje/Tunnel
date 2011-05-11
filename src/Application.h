@@ -9,7 +9,7 @@
 #include "Math.h"
 #include "ScreenDims.h"
 
-class Application : public ofBaseApp{
+class Application : public ofBaseApp {
 public:
     void setup();
 	void draw();
@@ -26,7 +26,7 @@ private:
     Math m;
     Tunnel tunnel;
     Ship ship;
-    vector<Hoop> hoops;
+    //vector<Hoop> hoops;
 };
 
 #endif

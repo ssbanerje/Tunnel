@@ -1,7 +1,7 @@
 #ifndef __TUNNEL_GUN_INC
 #define __TUNNEL_GUN_INC
 
-#include "ofMain.h"
+#include "ofGraphics.h"
 #include "ofx3DModelLoader.h"
 
 #include "ScreenDims.h"

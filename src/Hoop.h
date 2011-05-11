@@ -1,7 +1,7 @@
 #ifndef __TUNNEL_HOOP_INC
 #define __TUNNEL_HOOP_INC
 
-#include "ofMain.h"
+#include "ofGraphics.h"
 
 class Hoop {
     ofPoint pos;

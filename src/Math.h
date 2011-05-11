@@ -1,9 +1,8 @@
 #ifndef __TUNNEL_MATH_INC
 #define __TUNNEL_MATH_INC
 
-#include <math.h>
-
-#include "ofMain.h"
+#include "ofMath.h"
+#include "ofConstants.h"
 
 #define ARR_LEN 1000
 
