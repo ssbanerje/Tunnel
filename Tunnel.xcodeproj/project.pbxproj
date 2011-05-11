@@ -76,7 +76,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = ./data;
-			dstSubfolderSpec = 7;
+			dstSubfolderSpec = 16;
 			files = (
 				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in CopyFiles */,
 				F727B8AE137A722B00AF4FE0 /* psionic.jpg in CopyFiles */,
