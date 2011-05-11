@@ -12,27 +12,21 @@
 
 class Ship {
 private:
-    ofPoint mousePos;
-    int mouseSize;
     int speed;
     int rot;
-    bool targeting;
     
     ofx3DModelLoader model;
     Math *m;
     
 public:
-    void initialize(Math *m);
-    
-    void setMousePos(int x,int y) {mousePos.set(x,y,0);}
-    void incCHSize() {mouseSize<15?mouseSize++:1;}
-    void decCHSize() {mouseSize>2?mouseSize--:1;}
-    void incSpeed() {speed>MAX_SPEED?speed-=10:0;}
-    void decSpeed() {speed<0.9*MIN_SPEED?speed+=10:0;}
+    void incSpeed() {speed>MAX_SPEED?speed-=5:0;}
+    void decSpeed() {speed<0.9*MIN_SPEED?speed+=5:0;}
     void incRot() {rot+=5;}
     void decRot() {rot-=5;}
     int getSpeed() {return speed;}
+    int getRot() {return rot;}
     
+    void initialize(Math *m);
     void drawCrossHairs();
     void drawShip();
     void drawControlPanel();

@@ -11,13 +11,16 @@ Math::Math() {
 
 //--------------------------------------------------------------
 float Math::sinLookup(float x) {
+    float t = x;
+    x<0 ? x=-x : x=x;
     int r = (int) (x/TWO_PI);
     x -= r*TWO_PI;
-    return sinArr[(int)(x/TWO_PI*ARR_LEN)];
+    return (t<0?-1:1)*sinArr[(int)(x/TWO_PI*ARR_LEN)];
 }
 
 //--------------------------------------------------------------
 float Math::cosLookup(float x) {
+    x<0 ? x=-x : x=x;
     int r = (int) (x/TWO_PI);
     x -= r*TWO_PI;
     return cosArr[(int)(x/TWO_PI*ARR_LEN)];

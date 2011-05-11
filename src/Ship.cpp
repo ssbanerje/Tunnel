@@ -8,13 +8,10 @@ GLfloat lightTwoColor[] = {WIDTH,HEIGHT,0};
 
 void Ship::initialize(Math *m) {
     ofLog(OF_LOG_VERBOSE, "Ship::initialize()");
-    mouseSize = 3;
-    targeting = false;
-    this->m = m;
     
+    this->m = m;
     speed = 0.9*MIN_SPEED;
     rot = 0;
-    
     model.loadModel("fighter1.3ds");
     
     glLightfv(GL_LIGHT0, GL_POSITION, lightOnePosition);
@@ -24,23 +21,6 @@ void Ship::initialize(Math *m) {
     glEnable(GL_LIGHT0);
     glEnable(GL_LIGHT1);
     glColorMaterial (GL_FRONT, GL_AMBIENT);
-}
-
-//--------------------------------------------------------------
-void Ship::drawCrossHairs() {
-    if((mousePos.x-WIDTH/2)*(mousePos.x-WIDTH/2) + (mousePos.y-HEIGHT/2)*(mousePos.y-HEIGHT/2) < 1.0/speed*1e5) {
-        ofSetColor(255,0,0);
-        targeting = true;
-    }
-    else {
-        ofSetColor(255, 255, 0);
-        targeting = true;
-    }
-    ofCircle(mousePos.x, mousePos.y, mouseSize*3);
-    ofCircle(mousePos.x, mousePos.y, mouseSize);
-    int x = mouseSize*4;
-    ofLine(mousePos.x-x, mousePos.y, mousePos.x+x, mousePos.y);
-    ofLine(mousePos.x, mousePos.y-x, mousePos.x, mousePos.y+x);
 }
 
 //--------------------------------------------------------------

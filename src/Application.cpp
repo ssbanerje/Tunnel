@@ -20,18 +20,16 @@ void Application::setup() {
 }
 
 //--------------------------------------------------------------
-void Application::draw() {    
+void Application::draw() {
     tunnel.draw(ship.getSpeed());
     
     ship.drawShip();
     
     ship.drawControlPanel();
     
-    ship.drawCrossHairs();
-    
     //Draw FPS
     ofSetColor(255, 255, 255);
-    string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
+    string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2)+" , "+ofToString(ship.getRot());
     ofDrawBitmapString(fpsStr, 100,750);
 }
 
@@ -47,14 +45,6 @@ void Application::exit() {
 //--------------------------------------------------------------
 void Application::keyPressed(int key) {
     switch (key) {
-        case '+':
-        case '=':
-            ship.incCHSize();
-            break;
-        case '_':
-        case '-':
-            ship.decCHSize();
-            break;
         case 'w':
         case 'W':
             ship.incSpeed();
@@ -65,11 +55,11 @@ void Application::keyPressed(int key) {
             break;
         case 'a':
         case 'A':
-            ship.decRot();
+            ship.incRot();
             break;
         case 'd':
         case 'D':
-            ship.incRot();
+            ship.decRot();
             break;
         default:
             break;
@@ -78,12 +68,10 @@ void Application::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void Application::mouseMoved(int x, int y ) {
-    ship.setMousePos(x,y);
 }
 
 //--------------------------------------------------------------
 void Application::mouseDragged(int x, int y, int button) {
-    ship.setMousePos(x,y);
 }
 
 //--------------------------------------------------------------
