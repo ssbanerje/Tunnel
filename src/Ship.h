@@ -16,6 +16,7 @@ private:
     int mouseSize;
     int speed;
     int rot;
+    bool targeting;
     
     ofx3DModelLoader model;
     Math *m;
