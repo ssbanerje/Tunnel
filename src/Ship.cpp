@@ -12,12 +12,12 @@ Ship::Ship() {
     speed = 0.9*MIN_SPEED;
     model.loadModel("fighter1.3ds");
     
-    glLightfv (GL_LIGHT0, GL_POSITION, lightOnePosition);
-    glLightfv (GL_LIGHT0, GL_AMBIENT, lightOneColor);
-    glLightfv (GL_LIGHT1, GL_POSITION, lightTwoPosition);
-    glLightfv (GL_LIGHT1, GL_AMBIENT, lightTwoColor);
-    glEnable (GL_LIGHT0);
-    glEnable (GL_LIGHT1);
+    glLightfv(GL_LIGHT0, GL_POSITION, lightOnePosition);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, lightOneColor);
+    glLightfv(GL_LIGHT1, GL_POSITION, lightTwoPosition);
+    glLightfv(GL_LIGHT1, GL_AMBIENT, lightTwoColor);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_LIGHT1);
     glColorMaterial (GL_FRONT, GL_AMBIENT);
 }
 
@@ -33,8 +33,8 @@ void Ship::drawCrossHairs() {
 
 //--------------------------------------------------------------
 void Ship::drawShip() {
-    glEnable (GL_LIGHTING);
-    glEnable (GL_COLOR_MATERIAL);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_COLOR_MATERIAL);
     
     ofPushMatrix();
     ofPushStyle();

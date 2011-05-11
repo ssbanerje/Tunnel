@@ -34,7 +34,6 @@
 		E4C242CD10CC650E004149E2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C242CC10CC650E004149E2 /* libfmodex.dylib */; };
 		E4C246DA10CCAE22004149E2 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C246D910CCAE22004149E2 /* freeimage.a */; };
 		F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B89B137A71B300AF4FE0 /* Application.cpp */; };
-		F727B8A9137A71B300AF4FE0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A0137A71B300AF4FE0 /* main.cpp */; };
 		F727B8AA137A71B300AF4FE0 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A1137A71B300AF4FE0 /* Math.cpp */; };
 		F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A4137A71B300AF4FE0 /* Ship.cpp */; };
 		F727B8AC137A71B300AF4FE0 /* Tunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */; };
@@ -128,7 +127,6 @@
 		F727B89C137A71B300AF4FE0 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F727B89E137A71B300AF4FE0 /* fighter1.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = fighter1.3ds; sourceTree = "<group>"; };
 		F727B89F137A71B300AF4FE0 /* psionic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = psionic.jpg; sourceTree = "<group>"; };
-		F727B8A0137A71B300AF4FE0 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		F727B8A1137A71B300AF4FE0 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
 		F727B8A2137A71B300AF4FE0 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
 		F727B8A3137A71B300AF4FE0 /* ScreenDims.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenDims.h; sourceTree = "<group>"; };
@@ -385,7 +383,6 @@
 				F727B89D137A71B300AF4FE0 /* Assets */,
 				F727B89B137A71B300AF4FE0 /* Application.cpp */,
 				F727B89C137A71B300AF4FE0 /* Application.h */,
-				F727B8A0137A71B300AF4FE0 /* main.cpp */,
 				F727B8A1137A71B300AF4FE0 /* Math.cpp */,
 				F727B8A2137A71B300AF4FE0 /* Math.h */,
 				F727B8A3137A71B300AF4FE0 /* ScreenDims.h */,
@@ -607,7 +604,6 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */,
-				F727B8A9137A71B300AF4FE0 /* main.cpp in Sources */,
 				F727B8AA137A71B300AF4FE0 /* Math.cpp in Sources */,
 				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
 				F727B8AC137A71B300AF4FE0 /* Tunnel.cpp in Sources */,
@@ -709,6 +705,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
@@ -831,6 +828,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
@@ -881,6 +879,7 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
