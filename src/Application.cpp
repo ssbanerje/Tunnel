@@ -47,18 +47,22 @@ void Application::keyPressed(int key) {
     switch (key) {
         case 'w':
         case 'W':
+        case OF_KEY_UP:
             ship.incSpeed();
             break;
         case 's':
         case 'S':
+        case OF_KEY_DOWN:
             ship.decSpeed();
             break;
         case 'a':
         case 'A':
+        case OF_KEY_LEFT:
             ship.incRot();
             break;
         case 'd':
         case 'D':
+        case OF_KEY_RIGHT:
             ship.decRot();
             break;
         default:
