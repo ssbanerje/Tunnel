@@ -10,22 +10,18 @@ void Application::setup() {
     ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
-    tunnel.initialize(WIDTH, HEIGHT, &m);    
-    speed = 0.9*MIN_SPEED;
-    rot = 0;
+    ofEnableAlphaBlending();
+    ofSetVerticalSync(true);
+    
+    tunnel.initialize(WIDTH, HEIGHT, &m);
 }
 
 //--------------------------------------------------------------
 void Application::draw() {
-    //Draw tunnel
-    ofPushMatrix();
-        ofTranslate(WIDTH/2, HEIGHT/2);
-        ofRotateZ(rot);
-        ofTranslate(-WIDTH/2, -HEIGHT/2);
-        tunnel.draw(speed);
-    ofPopMatrix();
+    tunnel.draw(ship.getSpeed());
+    ship.drawShip();
     
-    drawControlPanel();
+    ship.drawControlPanel();
     
     //Draw FPS
     ofSetColor(255, 255, 255);
@@ -47,27 +43,27 @@ void Application::keyPressed(int key) {
     switch (key) {
         case '+':
         case '=':
-            g.incCHSize();
+            ship.incCHSize();
             break;
         case '_':
         case '-':
-            g.decCHSize();
+            ship.decCHSize();
             break;
         case 'w':
         case 'W':
-            speed>MAX_SPEED?speed-=10:0;
+            ship.incSpeed();
             break;
         case 's':
         case 'S':
-            speed<0.9*MIN_SPEED?speed+=10:0;
+            ship.decSpeed();
             break;
         case 'a':
         case 'A':
-            rot-=5;
+            ship.decRot();
             break;
         case 'd':
         case 'D':
-            rot+=5;
+            ship.incRot();
             break;
         default:
             break;
@@ -76,12 +72,12 @@ void Application::keyPressed(int key) {
 
 //--------------------------------------------------------------
 void Application::mouseMoved(int x, int y ) {
-    g.setMousePos(x,y);
+    ship.setMousePos(x,y);
 }
 
 //--------------------------------------------------------------
 void Application::mouseDragged(int x, int y, int button) {
-    g.setMousePos(x,y);
+    ship.setMousePos(x,y);
 }
 
 //--------------------------------------------------------------
@@ -94,56 +90,4 @@ void Application::mouseReleased(int x, int y, int button) {
 
 //--------------------------------------------------------------
 void Application::windowResized(int w, int h) {
-}
-
-//--------------------------------------------------------------
-void Application::drawControlPanel() {
-    ofPushStyle();
-        ofSetColor(200, 200, 200, 25);
-        ofFill();
-        ofRect(0, 5*HEIGHT/6, WIDTH, HEIGHT/8);
-    ofPopStyle();
-    
-    ofPushMatrix();
-    ofPushStyle();
-        ofSetColor(255, 255, 255);
-        ofNoFill();
-        ofTranslate(20, 9*HEIGHT/10);
-        ofDrawBitmapString("Speed", 0, -5);
-        ofBeginShape();
-            ofVertex(0,0);
-            ofVertex(0,HEIGHT/80);
-            ofVertex(WIDTH/3, HEIGHT/80);
-            ofVertex(WIDTH/3, 0);
-            ofVertex(0, 0);
-        ofEndShape();
-        ofSetColor(55,100,200);
-        ofFill();
-        int m = WIDTH/3 - 4;
-        ofBeginShape();
-            ofVertex(3,3);
-            ofVertex(3,HEIGHT/80-3);
-            ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, HEIGHT/80-3);
-            ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, 3);
-            ofVertex(3, 3);
-        ofEndShape();
-    ofPopStyle();
-    ofPopMatrix();
-    
-    ofPushMatrix();
-    ofPushStyle();
-        ofSetColor(255, 255, 255);
-        ofTranslate(10*WIDTH/11, 9*HEIGHT/10);
-        ofDrawBitmapString("Rotation", -30, -27);
-        ofNoFill();
-        ofCircle(0, 0, 20);
-        ofLine(20, 0, -20, 0);
-        ofLine(0, 20, 0, -20);
-        ofSetColor(55, 100, 200);
-        ofRotateZ(rot);
-        ofSetLineWidth(3);
-        ofLine(0, -25, 0, 25);
-        ofSetLineWidth(1);
-    ofPopStyle();
-    ofPopMatrix();
 }

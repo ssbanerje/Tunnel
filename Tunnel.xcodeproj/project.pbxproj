@@ -35,8 +35,13 @@
 		E4C246DA10CCAE22004149E2 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C246D910CCAE22004149E2 /* freeimage.a */; };
 		F78B2AB2137918F900F8E58E /* Tunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78B2AB0137918F900F8E58E /* Tunnel.cpp */; };
 		F78B2AB51379198500F8E58E /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78B2AB31379198500F8E58E /* Application.cpp */; };
+		F7BC24AC137A55A0002BF000 /* model3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7BC24A4137A55A0002BF000 /* model3DS.cpp */; };
+		F7BC24AD137A55A0002BF000 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7BC24A6137A55A0002BF000 /* texture3DS.cpp */; };
+		F7BC24AE137A55A0002BF000 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7BC24AA137A55A0002BF000 /* ofx3dModelLoader.cpp */; };
+		F7BC24B4137A5B4B002BF000 /* fighter1.3ds in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7BC24B3137A5B38002BF000 /* fighter1.3ds */; };
+		F7BC24B7137A5E49002BF000 /* psionic.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7BC24B6137A5E3F002BF000 /* psionic.jpg */; };
 		F7DC0055137952F7006E2402 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DC0053137952F7006E2402 /* Math.cpp */; };
-		F7DC005A1379574D006E2402 /* Gun.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DC00581379574D006E2402 /* Gun.cpp */; };
+		F7DC005A1379574D006E2402 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DC00581379574D006E2402 /* Ship.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,17 @@
 			dstSubfolderSpec = 10;
 			files = (
 				E4C2426B10CC5AA6004149E2 /* GLUT.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7BC24B1137A5A48002BF000 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = ./data;
+			dstSubfolderSpec = 16;
+			files = (
+				F7BC24B7137A5E49002BF000 /* psionic.jpg in CopyFiles */,
+				F7BC24B4137A5B4B002BF000 /* fighter1.3ds in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,10 +127,22 @@
 		F78B2AB1137918F900F8E58E /* Tunnel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tunnel.h; sourceTree = "<group>"; };
 		F78B2AB31379198500F8E58E /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		F78B2AB41379198500F8E58E /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
+		F7BC24A1137A55A0002BF000 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		F7BC24A4137A55A0002BF000 /* model3DS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = model3DS.cpp; sourceTree = "<group>"; };
+		F7BC24A5137A55A0002BF000 /* model3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = model3DS.h; sourceTree = "<group>"; };
+		F7BC24A6137A55A0002BF000 /* texture3DS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture3DS.cpp; sourceTree = "<group>"; };
+		F7BC24A7137A55A0002BF000 /* texture3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = texture3DS.h; sourceTree = "<group>"; };
+		F7BC24A8137A55A0002BF000 /* Vector3DS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector3DS.h; sourceTree = "<group>"; };
+		F7BC24A9137A55A0002BF000 /* ofx3DBaseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DBaseLoader.h; sourceTree = "<group>"; };
+		F7BC24AA137A55A0002BF000 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
+		F7BC24AB137A55A0002BF000 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
+		F7BC24B3137A5B38002BF000 /* fighter1.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; name = fighter1.3ds; path = Assets/fighter1.3ds; sourceTree = "<group>"; };
+		F7BC24B6137A5E3F002BF000 /* psionic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = psionic.jpg; path = Assets/psionic.jpg; sourceTree = "<group>"; };
+		F7BC24B8137A610B002BF000 /* ScreenDims.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenDims.h; sourceTree = "<group>"; };
 		F7DC0053137952F7006E2402 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
 		F7DC0054137952F7006E2402 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
-		F7DC00581379574D006E2402 /* Gun.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gun.cpp; sourceTree = "<group>"; };
-		F7DC00591379574D006E2402 /* Gun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gun.h; sourceTree = "<group>"; };
+		F7DC00581379574D006E2402 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
+		F7DC00591379574D006E2402 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +183,7 @@
 		BB4B018C10F6955C006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F7BC24A0137A55A0002BF000 /* ofx3DModelLoader */,
 			);
 			name = addons;
 			sourceTree = "<group>";
@@ -351,6 +380,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F7BC24B5137A5DFA002BF000 /* Assets */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				F78B2AB31379198500F8E58E /* Application.cpp */,
 				F78B2AB41379198500F8E58E /* Application.h */,
@@ -358,8 +388,9 @@
 				F7DC0054137952F7006E2402 /* Math.h */,
 				F78B2AB0137918F900F8E58E /* Tunnel.cpp */,
 				F78B2AB1137918F900F8E58E /* Tunnel.h */,
-				F7DC00581379574D006E2402 /* Gun.cpp */,
-				F7DC00591379574D006E2402 /* Gun.h */,
+				F7DC00581379574D006E2402 /* Ship.cpp */,
+				F7DC00591379574D006E2402 /* Ship.h */,
+				F7BC24B8137A610B002BF000 /* ScreenDims.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -447,6 +478,48 @@
 			path = ../../../libs/FreeImage/lib/osx;
 			sourceTree = SOURCE_ROOT;
 		};
+		F7BC24A0137A55A0002BF000 /* ofx3DModelLoader */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC24A1137A55A0002BF000 /* install.xml */,
+				F7BC24A2137A55A0002BF000 /* src */,
+			);
+			name = ofx3DModelLoader;
+			path = ../../../addons/ofx3DModelLoader;
+			sourceTree = "<group>";
+		};
+		F7BC24A2137A55A0002BF000 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC24A3137A55A0002BF000 /* 3DS */,
+				F7BC24A9137A55A0002BF000 /* ofx3DBaseLoader.h */,
+				F7BC24AA137A55A0002BF000 /* ofx3dModelLoader.cpp */,
+				F7BC24AB137A55A0002BF000 /* ofx3DModelLoader.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F7BC24A3137A55A0002BF000 /* 3DS */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC24A4137A55A0002BF000 /* model3DS.cpp */,
+				F7BC24A5137A55A0002BF000 /* model3DS.h */,
+				F7BC24A6137A55A0002BF000 /* texture3DS.cpp */,
+				F7BC24A7137A55A0002BF000 /* texture3DS.h */,
+				F7BC24A8137A55A0002BF000 /* Vector3DS.h */,
+			);
+			path = 3DS;
+			sourceTree = "<group>";
+		};
+		F7BC24B5137A5DFA002BF000 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F7BC24B6137A5E3F002BF000 /* psionic.jpg */,
+				F7BC24B3137A5B38002BF000 /* fighter1.3ds */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -458,6 +531,7 @@
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
 				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
 				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+				F7BC24B1137A5A48002BF000 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -532,7 +606,10 @@
 				F78B2AB2137918F900F8E58E /* Tunnel.cpp in Sources */,
 				F78B2AB51379198500F8E58E /* Application.cpp in Sources */,
 				F7DC0055137952F7006E2402 /* Math.cpp in Sources */,
-				F7DC005A1379574D006E2402 /* Gun.cpp in Sources */,
+				F7DC005A1379574D006E2402 /* Ship.cpp in Sources */,
+				F7BC24AC137A55A0002BF000 /* model3DS.cpp in Sources */,
+				F7BC24AD137A55A0002BF000 /* texture3DS.cpp in Sources */,
+				F7BC24AE137A55A0002BF000 /* ofx3dModelLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
