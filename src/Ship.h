@@ -14,6 +14,7 @@ class Ship {
 private:
     int speed;
     int rot;
+    int score;
     
     ofx3DModelLoader model;
     Math *m;

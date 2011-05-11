@@ -42,6 +42,7 @@
 		F727B8BE137A725800AF4FE0 /* model3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B6137A725800AF4FE0 /* model3DS.cpp */; };
 		F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B8137A725800AF4FE0 /* texture3DS.cpp */; };
 		F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */; };
+		F7B43CE8137AE1CE00F2DE90 /* Hoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		F727B8BB137A725800AF4FE0 /* ofx3DBaseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DBaseLoader.h; sourceTree = "<group>"; };
 		F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
 		F727B8BD137A725800AF4FE0 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
+		F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hoop.cpp; sourceTree = "<group>"; };
+		F7B43CE7137AE1CE00F2DE90 /* Hoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoop.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -391,6 +394,8 @@
 				F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */,
 				F727B8A7137A71B300AF4FE0 /* Tunnel.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */,
+				F7B43CE7137AE1CE00F2DE90 /* Hoop.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -610,6 +615,7 @@
 				F727B8BE137A725800AF4FE0 /* model3DS.cpp in Sources */,
 				F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */,
 				F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */,
+				F7B43CE8137AE1CE00F2DE90 /* Hoop.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

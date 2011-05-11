@@ -5,6 +5,7 @@
 #include "Tunnel.h"
 
 #include "Ship.h"
+#include "Hoop.h"
 #include "Math.h"
 #include "ScreenDims.h"
 
@@ -25,6 +26,7 @@ private:
     Math m;
     Tunnel tunnel;
     Ship ship;
+    vector<Hoop> hoops;
 };
 
 #endif

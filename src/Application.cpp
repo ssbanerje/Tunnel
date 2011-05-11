@@ -10,6 +10,7 @@ void Application::setup() {
     ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
+    ofSeedRandom();
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     

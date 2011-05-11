@@ -12,6 +12,7 @@ void Ship::initialize(Math *m) {
     this->m = m;
     speed = 0.9*MIN_SPEED;
     rot = 0;
+    score = 0;
     model.loadModel("fighter1.3ds");
     
     glLightfv(GL_LIGHT0, GL_POSITION, lightOnePosition);
@@ -96,5 +97,9 @@ void Ship::drawControlPanel() {
         ofSetLineWidth(1);
     ofPopStyle();
     ofPopMatrix();
+
+    ofSetColor(255, 255, 255);
+    ofDrawBitmapString("Score: "+ofToString(score), WIDTH/2, 6.5*HEIGHT/7);
+    
     ofDisableSmoothing();
 }
