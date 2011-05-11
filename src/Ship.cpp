@@ -1,10 +1,24 @@
 #include "Ship.h"
 
+GLfloat lightOnePosition[] = {0,0,0};
+GLfloat lightOneColor[] = {0.99, 0.99, 0.99, 1.0};
+
+GLfloat lightTwoPosition[] = {-40.0, 40, 100.0, 0.0};
+GLfloat lightTwoColor[] = {WIDTH,HEIGHT,0};
+
 Ship::Ship() {
     ofLog(OF_LOG_VERBOSE, "Gun::Gun()");
     mouseSize = 3;
     speed = 0.9*MIN_SPEED;
     model.loadModel("fighter1.3ds");
+    
+    glLightfv (GL_LIGHT0, GL_POSITION, lightOnePosition);
+    glLightfv (GL_LIGHT0, GL_AMBIENT, lightOneColor);
+    glLightfv (GL_LIGHT1, GL_POSITION, lightTwoPosition);
+    glLightfv (GL_LIGHT1, GL_AMBIENT, lightTwoColor);
+    glEnable (GL_LIGHT0);
+    glEnable (GL_LIGHT1);
+    glColorMaterial (GL_FRONT, GL_AMBIENT);
 }
 
 //--------------------------------------------------------------
@@ -19,14 +33,21 @@ void Ship::drawCrossHairs() {
 
 //--------------------------------------------------------------
 void Ship::drawShip() {
+    glEnable (GL_LIGHTING);
+    glEnable (GL_COLOR_MATERIAL);
     
     ofPushMatrix();
+    ofPushStyle();
         ofTranslate(400, 400);
         ofRotate(90, 0, -1, 0); 
         ofRotate(180, 0, 0, -1);
         glScalef(10, 10, 10);
         model.draw();
+    ofPopStyle();
     ofPopMatrix();
+    
+    glDisable(GL_LIGHTING);
+    glDisable(GL_COLOR_MATERIAL);
 }
 
 //--------------------------------------------------------------
