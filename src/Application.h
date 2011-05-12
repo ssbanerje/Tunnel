@@ -7,7 +7,6 @@
 #include "ScreenDims.h"
 #include "LookupMath.h"
 #include "Ship.h"
-#include "Hoop.h"
 
 class Application : public ofBaseApp {
 public:
@@ -26,7 +25,6 @@ private:
     LookupMath m;
     Tunnel tunnel;
     Ship ship;
-    vector<Hoop> hoops;
     bool fullscreen;
 };
 

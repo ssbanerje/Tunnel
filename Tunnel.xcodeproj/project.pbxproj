@@ -32,7 +32,6 @@
 		E4C2429410CC5C38004149E2 /* freetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2429310CC5C38004149E2 /* freetype.a */; };
 		E4C242CD10CC650E004149E2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C242CC10CC650E004149E2 /* libfmodex.dylib */; };
 		E4C246DA10CCAE22004149E2 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C246D910CCAE22004149E2 /* freeimage.a */; };
-		F7011B04137BBF7500805ACD /* Hoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7011B02137BBF7500805ACD /* Hoop.cpp */; };
 		F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B89B137A71B300AF4FE0 /* Application.cpp */; };
 		F727B8AA137A71B300AF4FE0 /* LookupMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */; };
 		F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A4137A71B300AF4FE0 /* Ship.cpp */; };
@@ -127,8 +126,6 @@
 		E4C2429310CC5C38004149E2 /* freetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freetype.a; path = ../../../libs/freetype/lib/osx/freetype.a; sourceTree = SOURCE_ROOT; };
 		E4C242CC10CC650E004149E2 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../../../libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = SOURCE_ROOT; };
 		E4C246D910CCAE22004149E2 /* freeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freeimage.a; path = ../../../libs/FreeImage/lib/osx/freeimage.a; sourceTree = SOURCE_ROOT; };
-		F7011B02137BBF7500805ACD /* Hoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hoop.cpp; sourceTree = "<group>"; };
-		F7011B03137BBF7500805ACD /* Hoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoop.h; sourceTree = "<group>"; };
 		F727B89B137A71B300AF4FE0 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		F727B89C137A71B300AF4FE0 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F727B89E137A71B300AF4FE0 /* fighter1.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = fighter1.3ds; sourceTree = "<group>"; };
@@ -534,10 +531,6 @@
 			children = (
 				F727B8A4137A71B300AF4FE0 /* Ship.cpp */,
 				F727B8A5137A71B300AF4FE0 /* Ship.h */,
-				F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */,
-				F7DEEA13137BD9FC0077048F /* ParticleSource.h */,
-				F7DEEA15137BDB4C0077048F /* Particle.cpp */,
-				F7DEEA16137BDB4C0077048F /* Particle.h */,
 			);
 			name = Ship;
 			sourceTree = "<group>";
@@ -547,8 +540,10 @@
 			children = (
 				F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */,
 				F727B8A7137A71B300AF4FE0 /* Tunnel.h */,
-				F7011B02137BBF7500805ACD /* Hoop.cpp */,
-				F7011B03137BBF7500805ACD /* Hoop.h */,
+				F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */,
+				F7DEEA13137BD9FC0077048F /* ParticleSource.h */,
+				F7DEEA15137BDB4C0077048F /* Particle.cpp */,
+				F7DEEA16137BDB4C0077048F /* Particle.h */,
 			);
 			name = Background;
 			sourceTree = "<group>";
@@ -652,7 +647,6 @@
 				F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */,
 				F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */,
 				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
-				F7011B04137BBF7500805ACD /* Hoop.cpp in Sources */,
 				F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */,
 				F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */,
 			);

@@ -33,13 +33,11 @@ void Application::draw() {
     //Draw FPS
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
-    ofDrawBitmapString(fpsStr, 100,750);
+    ofDrawBitmapString(fpsStr, 100,HEIGHT-20);
 }
 
 //--------------------------------------------------------------
 void Application::update() {
-    Hoop h;
-    hoops.push_back(h);
 }
 
 //--------------------------------------------------------------

@@ -5,7 +5,7 @@
 
 #include "LookupMath.h"
 
-#define DEPTH_OF_TUNNEL 8.5
+#define DEPTH_OF_TUNNEL 9
 
 class Tunnel {
 private:
