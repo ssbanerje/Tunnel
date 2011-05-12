@@ -1,7 +1,7 @@
 #include "Tunnel.h"
 
 //--------------------------------------------------------------
-void Tunnel::initialize(int w, int h, Math *m) {
+void Tunnel::initialize(int w, int h, LookupMath *m) {
     ofLog(OF_LOG_VERBOSE, "Tunnel::initialize(%d, %d)",w,h);
     width = w;
     height = h;
@@ -21,7 +21,7 @@ ofPoint Tunnel::getPoint(float x, float y, float z) {
 ofPoint Tunnel::getSurface(float a, float z) {
     register float r = width/10.0;
 	register float R = width/3.0;
-	register float b = -20*m->cosLookup(a*5 + t);
+	float b = -20*m->cosLookup(a*5 + t);
 	return getPoint(
              width/2 + (R * m->cosLookup(a) + r*m->sinLookup(z + 2*t))/z + m->cosLookup(a)*b, 
              height/2 + (R * m->sinLookup(a))/z + m->sinLookup(a)*b,

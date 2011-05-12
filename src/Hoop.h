@@ -2,6 +2,7 @@
 #define __TUNNEL_HOOP_INC
 
 #include "ofGraphics.h"
+#include "ofMath.h"
 
 class Hoop {
     ofPoint pos;

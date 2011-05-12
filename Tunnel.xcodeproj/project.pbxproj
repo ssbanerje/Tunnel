@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; };
+		E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE0A90E8CC67C009D7055 /* GLee.a */; settings = {ATTRIBUTES = (Required, ); }; };
 		E45BE2E40E8CC69C009D7055 /* rtAudio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE2E30E8CC69C009D7055 /* rtAudio.a */; };
 		E45BE97B0E8CC7DD009D7055 /* AGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9710E8CC7DD009D7055 /* AGL.framework */; };
 		E45BE97C0E8CC7DD009D7055 /* ApplicationServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E45BE9720E8CC7DD009D7055 /* ApplicationServices.framework */; };
@@ -24,7 +24,6 @@
 		E4C2424810CC5A17004149E2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424510CC5A17004149E2 /* Cocoa.framework */; };
 		E4C2424910CC5A17004149E2 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2424610CC5A17004149E2 /* IOKit.framework */; };
 		E4C2426610CC5A78004149E2 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2425F10CC5A78004149E2 /* GLUT.framework */; };
-		E4C2426B10CC5AA6004149E2 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E4C2425F10CC5A78004149E2 /* GLUT.framework */; };
 		E4C2427F10CC5B66004149E2 /* CppUnit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2427A10CC5B66004149E2 /* CppUnit.a */; };
 		E4C2428010CC5B66004149E2 /* PocoFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2427B10CC5B66004149E2 /* PocoFoundation.a */; };
 		E4C2428110CC5B66004149E2 /* PocoNet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2427C10CC5B66004149E2 /* PocoNet.a */; };
@@ -33,16 +32,17 @@
 		E4C2429410CC5C38004149E2 /* freetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2429310CC5C38004149E2 /* freetype.a */; };
 		E4C242CD10CC650E004149E2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C242CC10CC650E004149E2 /* libfmodex.dylib */; };
 		E4C246DA10CCAE22004149E2 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C246D910CCAE22004149E2 /* freeimage.a */; };
+		F7011B04137BBF7500805ACD /* Hoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7011B02137BBF7500805ACD /* Hoop.cpp */; };
 		F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B89B137A71B300AF4FE0 /* Application.cpp */; };
-		F727B8AA137A71B300AF4FE0 /* Math.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A1137A71B300AF4FE0 /* Math.cpp */; };
+		F727B8AA137A71B300AF4FE0 /* LookupMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */; };
 		F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A4137A71B300AF4FE0 /* Ship.cpp */; };
 		F727B8AC137A71B300AF4FE0 /* Tunnel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */; };
-		F727B8AD137A722B00AF4FE0 /* fighter1.3ds in CopyFiles */ = {isa = PBXBuildFile; fileRef = F727B89E137A71B300AF4FE0 /* fighter1.3ds */; };
-		F727B8AE137A722B00AF4FE0 /* psionic.jpg in CopyFiles */ = {isa = PBXBuildFile; fileRef = F727B89F137A71B300AF4FE0 /* psionic.jpg */; };
+		F727B8AD137A722B00AF4FE0 /* fighter1.3ds in Copy Files */ = {isa = PBXBuildFile; fileRef = F727B89E137A71B300AF4FE0 /* fighter1.3ds */; };
+		F727B8AE137A722B00AF4FE0 /* psionic.jpg in Copy Files */ = {isa = PBXBuildFile; fileRef = F727B89F137A71B300AF4FE0 /* psionic.jpg */; };
 		F727B8BE137A725800AF4FE0 /* model3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B6137A725800AF4FE0 /* model3DS.cpp */; };
 		F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B8137A725800AF4FE0 /* texture3DS.cpp */; };
 		F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */; };
-		F7B43CE8137AE1CE00F2DE90 /* Hoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */; };
+		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,19 +69,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E4C2426B10CC5AA6004149E2 /* GLUT.framework in CopyFiles */,
+				F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4C2444710CC769B004149E2 /* CopyFiles */ = {
+		E4C2444710CC769B004149E2 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = ./data;
 			dstSubfolderSpec = 16;
 			files = (
-				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in CopyFiles */,
-				F727B8AE137A722B00AF4FE0 /* psionic.jpg in CopyFiles */,
+				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in Copy Files */,
+				F727B8AE137A722B00AF4FE0 /* psionic.jpg in Copy Files */,
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -124,12 +125,14 @@
 		E4C2429310CC5C38004149E2 /* freetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freetype.a; path = ../../../libs/freetype/lib/osx/freetype.a; sourceTree = SOURCE_ROOT; };
 		E4C242CC10CC650E004149E2 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../../../libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = SOURCE_ROOT; };
 		E4C246D910CCAE22004149E2 /* freeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freeimage.a; path = ../../../libs/FreeImage/lib/osx/freeimage.a; sourceTree = SOURCE_ROOT; };
+		F7011B02137BBF7500805ACD /* Hoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hoop.cpp; sourceTree = "<group>"; };
+		F7011B03137BBF7500805ACD /* Hoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoop.h; sourceTree = "<group>"; };
 		F727B89B137A71B300AF4FE0 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		F727B89C137A71B300AF4FE0 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F727B89E137A71B300AF4FE0 /* fighter1.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = fighter1.3ds; sourceTree = "<group>"; };
 		F727B89F137A71B300AF4FE0 /* psionic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = psionic.jpg; sourceTree = "<group>"; };
-		F727B8A1137A71B300AF4FE0 /* Math.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Math.cpp; sourceTree = "<group>"; };
-		F727B8A2137A71B300AF4FE0 /* Math.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Math.h; sourceTree = "<group>"; };
+		F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LookupMath.cpp; sourceTree = "<group>"; };
+		F727B8A2137A71B300AF4FE0 /* LookupMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupMath.h; sourceTree = "<group>"; };
 		F727B8A3137A71B300AF4FE0 /* ScreenDims.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenDims.h; sourceTree = "<group>"; };
 		F727B8A4137A71B300AF4FE0 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
 		F727B8A5137A71B300AF4FE0 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
@@ -144,8 +147,7 @@
 		F727B8BB137A725800AF4FE0 /* ofx3DBaseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DBaseLoader.h; sourceTree = "<group>"; };
 		F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
 		F727B8BD137A725800AF4FE0 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
-		F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hoop.cpp; sourceTree = "<group>"; };
-		F7B43CE7137AE1CE00F2DE90 /* Hoop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoop.h; sourceTree = "<group>"; };
+		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,6 +336,7 @@
 		E45BE5980E8CC70C009D7055 /* core frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7422C35137B0F4100C60705 /* GLUT.framework */,
 				E4C2424410CC5A17004149E2 /* AppKit.framework */,
 				E4C2424510CC5A17004149E2 /* Cocoa.framework */,
 				E4C2424610CC5A17004149E2 /* IOKit.framework */,
@@ -386,16 +389,16 @@
 				F727B89D137A71B300AF4FE0 /* Assets */,
 				F727B89B137A71B300AF4FE0 /* Application.cpp */,
 				F727B89C137A71B300AF4FE0 /* Application.h */,
-				F727B8A1137A71B300AF4FE0 /* Math.cpp */,
-				F727B8A2137A71B300AF4FE0 /* Math.h */,
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */,
+				F727B8A2137A71B300AF4FE0 /* LookupMath.h */,
 				F727B8A3137A71B300AF4FE0 /* ScreenDims.h */,
 				F727B8A4137A71B300AF4FE0 /* Ship.cpp */,
 				F727B8A5137A71B300AF4FE0 /* Ship.h */,
 				F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */,
 				F727B8A7137A71B300AF4FE0 /* Tunnel.h */,
-				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
-				F7B43CE6137AE1CE00F2DE90 /* Hoop.cpp */,
-				F7B43CE7137AE1CE00F2DE90 /* Hoop.h */,
+				F7011B02137BBF7500805ACD /* Hoop.cpp */,
+				F7011B03137BBF7500805ACD /* Hoop.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -536,7 +539,7 @@
 				E4B69B590A3A1756003C02F2 /* Frameworks */,
 				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
 				E4C2427710CC5ABF004149E2 /* CopyFiles */,
-				E4C2444710CC769B004149E2 /* CopyFiles */,
+				E4C2444710CC769B004149E2 /* Copy Files */,
 			);
 			buildRules = (
 			);
@@ -609,13 +612,13 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */,
-				F727B8AA137A71B300AF4FE0 /* Math.cpp in Sources */,
-				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
+				F727B8AA137A71B300AF4FE0 /* LookupMath.cpp in Sources */,
 				F727B8AC137A71B300AF4FE0 /* Tunnel.cpp in Sources */,
 				F727B8BE137A725800AF4FE0 /* model3DS.cpp in Sources */,
 				F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */,
 				F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */,
-				F7B43CE8137AE1CE00F2DE90 /* Hoop.cpp in Sources */,
+				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
+				F7011B04137BBF7500805ACD /* Hoop.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -673,6 +676,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -711,8 +716,9 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
@@ -794,6 +800,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -834,8 +842,9 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
 				WRAPPER_EXTENSION = app;
@@ -847,6 +856,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
@@ -885,8 +896,9 @@
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_4 = "\"$(SRCROOT)/../../../libs/GLee/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_5 = "\"$(SRCROOT)/../../../libs/poco/lib/osx\"";
 				LIBRARY_SEARCH_PATHS_QUOTED_FOR_TARGET_6 = "\"$(SRCROOT)/../../../libs/rtAudio/lib/osx\"";
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
+				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = Tunnel;
 				SDKROOT = "";
 				WRAPPER_EXTENSION = app;

@@ -5,7 +5,7 @@
 #include "ofx3DModelLoader.h"
 
 #include "ScreenDims.h"
-#include "Math.h"
+#include "LookupMath.h"
 
 #define MAX_SPEED 10
 #define MIN_SPEED 100
@@ -17,7 +17,7 @@ private:
     int score;
     
     ofx3DModelLoader model;
-    Math *m;
+    LookupMath *m;
     
 public:
     void incSpeed() {speed>MAX_SPEED?speed-=5:0;}
@@ -27,7 +27,7 @@ public:
     int getSpeed() {return speed;}
     int getRot() {return rot;}
     
-    void initialize(Math *m);
+    void initialize(LookupMath *m);
     void drawCrossHairs();
     void drawShip();
     void drawControlPanel();

@@ -1,10 +1,9 @@
 #ifndef __TUNNEL_INC
 #define __TUNNEL_INC
 
-#include <math.h>
-
 #include "ofGraphics.h"
-#include "Math.h"
+
+#include "LookupMath.h"
 
 #define DEPTH_OF_TUNNEL 8.5
 
@@ -14,7 +13,7 @@ private:
     int height;
     float t;
     float z;
-    Math *m;
+    LookupMath *m;
     
     ofPoint getPoint(float x, float y, float z);
     ofPoint getSurface(float a, float z);
@@ -26,9 +25,7 @@ private:
     float cosLookup(float y);
     
 public:
-    Tunnel() {}
-    ~Tunnel() {}
-    void initialize(int w, int h, Math *m);
+    void initialize(int w, int h, LookupMath *m);
     void draw(int speed);
 };
 

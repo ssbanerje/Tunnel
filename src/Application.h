@@ -2,12 +2,12 @@
 #define __TUNNEL_APPLICATION_INC
 
 #include "ofMain.h"
-#include "Tunnel.h"
 
+#include "Tunnel.h"
+#include "ScreenDims.h"
+#include "LookupMath.h"
 #include "Ship.h"
 #include "Hoop.h"
-#include "Math.h"
-#include "ScreenDims.h"
 
 class Application : public ofBaseApp {
 public:
@@ -23,7 +23,7 @@ public:
 	void windowResized(int w,int h);
     
 private:
-    Math m;
+    LookupMath m;
     Tunnel tunnel;
     Ship ship;
     //vector<Hoop> hoops;
