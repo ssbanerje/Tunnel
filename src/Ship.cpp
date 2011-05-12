@@ -6,6 +6,7 @@ GLfloat lightOneColor[] = {0.99, 0.99, 0.99, 1.0};
 GLfloat lightTwoPosition[] = {-40.0, 40, 100.0, 0.0};
 GLfloat lightTwoColor[] = {WIDTH,HEIGHT,0};
 
+//--------------------------------------------------------------
 void Ship::initialize(LookupMath *m) {
     ofLog(OF_LOG_VERBOSE, "Ship::initialize()");
     

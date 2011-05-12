@@ -5,8 +5,9 @@ void Application::setup() {
     ofSetLogLevel(0);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
-    ofBackground(0,0,0);
+    ofBackground(0, 0, 0);
     ofSetWindowShape(WIDTH, HEIGHT);
+    ofSetWindowPosition(10, 10);
     ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
@@ -18,6 +19,7 @@ void Application::setup() {
     
     tunnel.initialize(WIDTH, HEIGHT, &m);
     ship.initialize(&m);
+    fullscreen = false;
 }
 
 //--------------------------------------------------------------
@@ -36,6 +38,8 @@ void Application::draw() {
 
 //--------------------------------------------------------------
 void Application::update() {
+    Hoop h;
+    hoops.push_back(h);
 }
 
 //--------------------------------------------------------------
@@ -46,6 +50,24 @@ void Application::exit() {
 //--------------------------------------------------------------
 void Application::keyPressed(int key) {
     switch (key) {
+        case 'f':
+        case 'F':
+            fullscreen = !fullscreen;
+            if(fullscreen) {
+#ifdef TARGET_OSX
+                CGRect screenFrame = CGDisplayBounds(kCGDirectMainDisplay);  
+                CGSize screenSize  = screenFrame.size;
+                WIDTH = screenSize.width;
+                HEIGHT = screenSize.height;
+#endif
+            }
+            else {
+                WIDTH = 1024;
+                HEIGHT = 768;
+            }
+            tunnel.initialize(WIDTH,HEIGHT,&m);
+            ofToggleFullscreen();
+            break;
         case 'w':
         case 'W':
         case OF_KEY_UP:

@@ -1,11 +1,13 @@
 #include "Hoop.h"
 
 //--------------------------------------------------------------
-Hoop::Hoop() {
+Hoop::Hoop() {    
     color.r = 255*ofRandomf();
     color.g = 255*ofRandomf();
     color.b = 255*ofRandomf();
     color.a = 255*ofRandomf();
+    
+    pos.set(WIDTH/2 + (ofRandomf()-0.5)*707, HEIGHT/2 + (ofRandomf()-0.5)*707, 0);
 }
 
 //--------------------------------------------------------------

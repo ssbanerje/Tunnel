@@ -26,7 +26,8 @@ private:
     LookupMath m;
     Tunnel tunnel;
     Ship ship;
-    //vector<Hoop> hoops;
+    vector<Hoop> hoops;
+    bool fullscreen;
 };
 
 #endif

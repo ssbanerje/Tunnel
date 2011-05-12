@@ -4,7 +4,10 @@
 #include "ofGraphics.h"
 #include "ofMath.h"
 
+#include "ScreenDims.h"
+
 class Hoop {
+private:
     ofPoint pos;
     ofColor color;
     int score;
