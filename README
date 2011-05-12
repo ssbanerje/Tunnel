@@ -1,12 +1,10 @@
 Tunnel
 
-by
-Subho Banerjee
-
-
-
 Put the files in $OFDIR/apps/myapps and compile!!
 
 
 Addons required ---
 ofx3DModelLoader
+
+
+Tunnel was built against v0.062 of openFrameworks
