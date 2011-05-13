@@ -8,7 +8,7 @@ void Application::setup() {
     ofBackground(0, 0, 0);
     ofSetWindowShape(ofGetWidth(), ofGetHeight());
     ofSetWindowPosition(10, 10);
-    ofSetFrameRate(40);
+    ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
     ofSeedRandom();
