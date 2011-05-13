@@ -6,7 +6,7 @@ void Application::setup() {
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
     ofBackground(0, 0, 0);
-    ofSetWindowShape(WIDTH, HEIGHT);
+    ofSetWindowShape(ofGetWidth(), ofGetHeight());
     ofSetWindowPosition(10, 10);
     ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
@@ -17,9 +17,8 @@ void Application::setup() {
     
     glLoadIdentity();
     
-    tunnel.initialize(WIDTH, HEIGHT, &m);
+    tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
     ship.initialize(&m);
-    fullscreen = false;
 }
 
 //--------------------------------------------------------------
@@ -33,7 +32,7 @@ void Application::draw() {
     //Draw FPS
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
-    ofDrawBitmapString(fpsStr, 100,HEIGHT-20);
+    ofDrawBitmapString(fpsStr, 100,ofGetHeight()-20);
 }
 
 //--------------------------------------------------------------
@@ -50,21 +49,8 @@ void Application::keyPressed(int key) {
     switch (key) {
         case 'f':
         case 'F':
-            fullscreen = !fullscreen;
-            if(fullscreen) {
-#ifdef TARGET_OSX
-                CGRect screenFrame = CGDisplayBounds(kCGDirectMainDisplay);  
-                CGSize screenSize  = screenFrame.size;
-                WIDTH = screenSize.width;
-                HEIGHT = screenSize.height;
-#endif
-            }
-            else {
-                WIDTH = 1024;
-                HEIGHT = 768;
-            }
-            tunnel.initialize(WIDTH,HEIGHT,&m);
             ofToggleFullscreen();
+            tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
             break;
         case 'w':
         case 'W':

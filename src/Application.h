@@ -4,7 +4,6 @@
 #include "ofMain.h"
 
 #include "Tunnel.h"
-#include "ScreenDims.h"
 #include "LookupMath.h"
 #include "Ship.h"
 
@@ -25,7 +24,6 @@ private:
     LookupMath m;
     Tunnel tunnel;
     Ship ship;
-    bool fullscreen;
 };
 
 #endif

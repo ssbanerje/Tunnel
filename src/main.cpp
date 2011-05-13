@@ -2,10 +2,9 @@
 #include "ofAppGlutWindow.h"
 
 #include "Application.h"
-#include "ScreenDims.h"
 
-int WIDTH = 1024;
-int HEIGHT = 768;
+#define WIDTH 1024
+#define HEIGHT 768
 
 //========================================================================
 int main( ){

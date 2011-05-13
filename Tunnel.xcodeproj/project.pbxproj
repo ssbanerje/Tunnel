@@ -42,6 +42,7 @@
 		F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B8137A725800AF4FE0 /* texture3DS.cpp */; };
 		F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */; };
 		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
+		F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = F74C06EA137CFD0700D957EB /* Courier New.ttf */; };
 		F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */; };
 		F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA15137BDB4C0077048F /* Particle.cpp */; };
 /* End PBXBuildFile section */
@@ -80,6 +81,7 @@
 			dstPath = ./data;
 			dstSubfolderSpec = 16;
 			files = (
+				F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */,
 				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in Copy Files */,
 				F727B8AE137A722B00AF4FE0 /* psionic.jpg in Copy Files */,
 			);
@@ -132,7 +134,6 @@
 		F727B89F137A71B300AF4FE0 /* psionic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = psionic.jpg; sourceTree = "<group>"; };
 		F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LookupMath.cpp; sourceTree = "<group>"; };
 		F727B8A2137A71B300AF4FE0 /* LookupMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookupMath.h; sourceTree = "<group>"; };
-		F727B8A3137A71B300AF4FE0 /* ScreenDims.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScreenDims.h; sourceTree = "<group>"; };
 		F727B8A4137A71B300AF4FE0 /* Ship.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ship.cpp; sourceTree = "<group>"; };
 		F727B8A5137A71B300AF4FE0 /* Ship.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Ship.h; sourceTree = "<group>"; };
 		F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Tunnel.cpp; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
 		F727B8BD137A725800AF4FE0 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
 		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
+		F74C06EA137CFD0700D957EB /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
 		F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSource.cpp; sourceTree = "<group>"; };
 		F7DEEA13137BD9FC0077048F /* ParticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSource.h; sourceTree = "<group>"; };
 		F7DEEA15137BDB4C0077048F /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
@@ -396,7 +398,6 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				F727B89B137A71B300AF4FE0 /* Application.cpp */,
 				F727B89C137A71B300AF4FE0 /* Application.h */,
-				F727B8A3137A71B300AF4FE0 /* ScreenDims.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -487,6 +488,7 @@
 		F727B89D137A71B300AF4FE0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				F74C06EA137CFD0700D957EB /* Courier New.ttf */,
 				F727B89E137A71B300AF4FE0 /* fighter1.3ds */,
 				F727B89F137A71B300AF4FE0 /* psionic.jpg */,
 			);

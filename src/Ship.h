@@ -2,9 +2,9 @@
 #define __TUNNEL_GUN_INC
 
 #include "ofGraphics.h"
+#include "ofAppRunner.h"
 #include "ofx3DModelLoader.h"
 
-#include "ScreenDims.h"
 #include "LookupMath.h"
 
 #define MAX_SPEED 10
@@ -18,6 +18,8 @@ private:
     
     ofx3DModelLoader model;
     LookupMath *m;
+    
+    ofTrueTypeFont font;
     
 public:
     void incSpeed() {speed>MAX_SPEED?speed-=5:0;}
