@@ -20,6 +20,8 @@ void Application::setup() {
     
     tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
     ship.initialize(&m);
+    kinect.initialize(&ship,&m);
+    showKinectMenu = false;
 }
 
 //--------------------------------------------------------------
@@ -30,6 +32,10 @@ void Application::draw() {
     
     ship.drawControlPanel();
     
+    if (showKinectMenu) {
+        kinect.draw();
+    }
+    
     //Draw FPS
     ofSetColor(255, 255, 255);
     string fpsStr = "frame rate: "+ofToString(ofGetFrameRate(), 2);
@@ -38,6 +44,7 @@ void Application::draw() {
 
 //--------------------------------------------------------------
 void Application::update() {
+    kinect.update();
 }
 
 //--------------------------------------------------------------
@@ -74,6 +81,22 @@ void Application::keyPressed(int key) {
         case 'D':
         case OF_KEY_RIGHT:
             ship.decRot();
+            break;
+        case 'n':
+            kinect.decNearThreshold();
+            break;
+        case 'N':
+            kinect.incNearThreshold();
+            break;
+        case 'm':
+            kinect.decFarThreshold();
+            break;
+        case 'M':
+            kinect.incFarThreshold();
+            break;
+        case 'k':
+        case 'K':
+            showKinectMenu != showKinectMenu;
             break;
         default:
             break;

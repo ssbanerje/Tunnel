@@ -41,6 +41,7 @@
 		F727B8BE137A725800AF4FE0 /* model3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B6137A725800AF4FE0 /* model3DS.cpp */; };
 		F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8B8137A725800AF4FE0 /* texture3DS.cpp */; };
 		F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */; };
+		F73F617E137D1D5A00F71CFD /* KinectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F73F617C137D1D5A00F71CFD /* KinectController.cpp */; };
 		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
 		F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = F74C06EA137CFD0700D957EB /* Courier New.ttf */; };
 		F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */; };
@@ -167,6 +168,8 @@
 		F727B8BB137A725800AF4FE0 /* ofx3DBaseLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DBaseLoader.h; sourceTree = "<group>"; };
 		F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofx3dModelLoader.cpp; sourceTree = "<group>"; };
 		F727B8BD137A725800AF4FE0 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
+		F73F617C137D1D5A00F71CFD /* KinectController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KinectController.cpp; sourceTree = "<group>"; };
+		F73F617D137D1D5A00F71CFD /* KinectController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KinectController.h; sourceTree = "<group>"; };
 		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		F74C06EA137CFD0700D957EB /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
 		F74C06FE137D0F4C00D957EB /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
@@ -491,6 +494,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				F7EAE8B8137D1767006BFCDD /* KinectController */,
 				F7DEEA11137BD49F0077048F /* Math */,
 				F7DEEA10137BD47E0077048F /* Background */,
 				F7DEEA0F137BD4620077048F /* Ship */,
@@ -901,6 +905,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		F7EAE8B8137D1767006BFCDD /* KinectController */ = {
+			isa = PBXGroup;
+			children = (
+				F73F617C137D1D5A00F71CFD /* KinectController.cpp */,
+				F73F617D137D1D5A00F71CFD /* KinectController.h */,
+			);
+			name = KinectController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1011,6 +1024,7 @@
 				F7EAE8AE137D15C8006BFCDD /* ofxMatrix4x4.cpp in Sources */,
 				F7EAE8AF137D15C8006BFCDD /* ofxQuaternion.cpp in Sources */,
 				F7EAE8B7137D15D9006BFCDD /* ofxThread.cpp in Sources */,
+				F73F617E137D1D5A00F71CFD /* KinectController.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

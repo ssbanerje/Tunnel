@@ -8,6 +8,8 @@
 #include "LookupMath.h"
 #include "Ship.h"
 
+#include "KinectController.h"
+
 class Application : public ofBaseApp {
 public:
     void setup();
@@ -25,6 +27,8 @@ private:
     LookupMath m;
     Tunnel tunnel;
     Ship ship;
+    KinectController kinect;
+    bool showKinectMenu;
 };
 
 #endif
