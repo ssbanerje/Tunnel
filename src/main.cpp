@@ -6,10 +6,8 @@
 
 
 //========================================================================
-int main( ){
-
+int main() {
     ofAppGlutWindow window;
 	ofSetupOpenGL(&window, WIDTH, HEIGHT, WINDOW_MODE);
-
 	ofRunApp(new Application());
 }

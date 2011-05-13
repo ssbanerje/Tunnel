@@ -10,7 +10,7 @@
 
 class Application : public ofBaseApp {
 public:
-  void setup();
+    void setup();
 	void draw();
 	void update();
 	void exit();
