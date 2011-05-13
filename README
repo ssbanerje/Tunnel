@@ -7,5 +7,7 @@ Addons required ---
 ofx3DModelLoader
 ofxOpenCv
 ofxKinect
+ofxThread
+ofxVectorMath
 
 Tunnel was built against v0.062 of openFrameworks
