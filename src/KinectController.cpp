@@ -45,7 +45,6 @@ void KinectController::update() {
     if(kinect.isFrameNew()) {
         setImages();
         contours.findContours(thImg, 250, 100000, 10, false, true);
-        if(ofGetFrameNum()%5==0)
             updateShip();
     }
 }
@@ -74,7 +73,7 @@ void KinectController::updateShip() {
             ship->incRot();
         else if(tanAngle<-0.577)
             ship->decRot();
-        ship->setScaleSpeed(((float)abs(b2->x-b1->x)+abs(b2->y-b1->y))/(kinect.width+kinect.height));
+        ship->setScaleSpeed(((float)abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.5));
     }
 }
 
@@ -98,21 +97,14 @@ void KinectController::draw() {
         depthImg.draw(width+10, 0, width, height);
         thImg.draw(2*width+20, 0, width, height);
         contours.draw(2*width+20, 0, width, height);
-        ofLine(2*width+20,height/3,3*width+20,height/3);
-        ofLine(2*width+20,2*height/3,3*width+20,2*height/3);
     ofPopMatrix();
 #ifdef SHOW_HAND_POS
     if(b1 && b2) {
         ofSetColor(255, 0, 0);
         ofCircle(scaleFactor_w*b1->x, scaleFactor_h*b1->y, 15);
         ofCircle(scaleFactor_w*b2->x, scaleFactor_h*b2->y, 15);
-        ofSetColor(0, 255, 0);
-        ofCircle(scaleFactor_w*(b1->x+b2->x)/2, scaleFactor_h*(b1->y+b2->y)/2, 15);
         ofSetColor(200, 200, 255, 50);
         ofLine(scaleFactor_w*b1->x, scaleFactor_h*b1->y, scaleFactor_w*b2->x, scaleFactor_h*b2->y);
-        ofSetColor(200, 200, 255, 100);
-        ofLine(0, ofGetHeight()/3, ofGetWidth(), ofGetHeight()/3);
-        ofLine(0, 2*ofGetHeight()/3, ofGetWidth(), 2*ofGetHeight()/3);
     }
 #endif
     ofPopStyle();
