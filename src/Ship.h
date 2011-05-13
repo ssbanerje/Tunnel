@@ -25,7 +25,7 @@ public:
     void incSpeed() {speed>MAX_SPEED?speed-=5:0;}
     void decSpeed() {speed<0.9*MIN_SPEED?speed+=5:0;}
     void setScaleSpeed(float x) {x<1&&x>0 ? speed=(MAX_SPEED-MIN_SPEED)*(x-1)+MAX_SPEED : 0;}
-    void setScaleRot(float x) {x<1&&x>-1 ? rot=x*180 : 0;}
+    void setScaleRot(float x) {x<1&&x>0 ? rot=x*360 : 0;}
     void incRot() {rot+=5;}
     void decRot() {rot-=5;}
     int getSpeed() {return speed;}
