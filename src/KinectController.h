@@ -34,12 +34,12 @@ public:
     void update();
     void draw();
     
-    void incNearThreshold() {nearThreshold<=255?nearThreshold+=10:0;}
-    void decNearThreshold() {nearThreshold>=0?nearThreshold-=10:0;}
-    void incFarThreshold() {farThreshold<=255?farThreshold+=10:0;}
-    void decFarThreshold() {farThreshold>=0?farThreshold-=10:0;}
-    void incAngle() {angle<30.0?angle++:0;}
-    void decAngle() {angle>-30.0?angle--:0;}
+    void incNearThreshold() {nearThreshold<=255?nearThreshold+=5:0;}
+    void decNearThreshold() {nearThreshold>=0?nearThreshold-=5:0;}
+    void incFarThreshold() {farThreshold<=255?farThreshold+=5:0;}
+    void decFarThreshold() {farThreshold>=0?farThreshold-=5:0;}
+    void incAngle() {angle<30.0?angle+=5:0;}
+    void decAngle() {angle>-30.0?angle-=5:0;}
 };
 
 #endif
