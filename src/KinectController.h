@@ -31,7 +31,6 @@ private:
     void updateShip();
     
 public:
-    KinectController();
     ~KinectController();
     void initialize(Ship *s, LookupMath *m);
     void update();
