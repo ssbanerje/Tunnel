@@ -15,8 +15,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
                BuildableName = "Tunnel.app"
-               BlueprintName = "Tunnel"
-               ReferencedContainer = "container:Tunnel.xcodeproj">
+               BlueprintName = "Tunnel_Kinect"
+               ReferencedContainer = "container:Tunnel_Kinect.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,8 +42,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "Tunnel.app"
-            BlueprintName = "Tunnel"
-            ReferencedContainer = "container:Tunnel.xcodeproj">
+            BlueprintName = "Tunnel_Kinect"
+            ReferencedContainer = "container:Tunnel_Kinect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -61,8 +61,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
             BuildableName = "Tunnel.app"
-            BlueprintName = "Tunnel"
-            ReferencedContainer = "container:Tunnel.xcodeproj">
+            BlueprintName = "Tunnel_Kinect"
+            ReferencedContainer = "container:Tunnel_Kinect.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
