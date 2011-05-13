@@ -1,6 +1,6 @@
 #include "Ship.h"
 
-GLfloat lightOnePosition[] = {0,0,0};
+GLfloat lightOnePosition[] = {0, 0, 0};
 GLfloat lightOneColor[] = {0.99, 0.99, 0.99, 1.0};
 
 GLfloat lightTwoPosition[] = {-40.0, 40, 100.0, 0.0};
@@ -15,7 +15,7 @@ void Ship::initialize(LookupMath *m) {
     rot = 0;
     score = 0;
     model.loadModel("fighter1.3ds");
-    font.loadFont("Courier New.ttf",20,true,true);
+    font.loadFont("Courier New.ttf", 20, true, true);
     font.setLineHeight(20);
     
     glLightfv(GL_LIGHT0, GL_POSITION, lightOnePosition);
@@ -65,18 +65,18 @@ void Ship::drawControlPanel() {
         ofTranslate(20, 9*ofGetHeight()/10);
         ofDrawBitmapString("Speed", 0, -5);
         ofBeginShape();
-        ofVertex(0,0);
-        ofVertex(0,ofGetHeight()/80);
+        ofVertex(0, 0);
+        ofVertex(0, ofGetHeight()/80);
         ofVertex(ofGetWidth()/3, ofGetHeight()/80);
         ofVertex(ofGetWidth()/3, 0);
         ofVertex(0, 0);
         ofEndShape();
-        ofSetColor(55,100,200);
+        ofSetColor(55, 100, 200);
         ofFill();
         int m = ofGetWidth()/3 - 4;
         ofBeginShape();
-        ofVertex(3,3);
-        ofVertex(3,ofGetHeight()/80-3);
+        ofVertex(3, 3);
+        ofVertex(3, ofGetHeight()/80-3);
         ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, ofGetHeight()/80-3);
         ofVertex((m-3)*(speed-MAX_SPEED)/(MAX_SPEED-MIN_SPEED)+m, 3);
         ofVertex(3, 3);

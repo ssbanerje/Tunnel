@@ -9,11 +9,11 @@ class Particle {
 public:
     Particle(int x, int y, double x_velocity, double y_velocity, int r, int g, int b);
     
-    int getX() { return (int)floor(x); }
-    int getY() { return (int)floor(y); }
-    int getR() { return r; }
-    int getG() { return g; }
-    int getB() { return b; }
+    int getX() {return (int)floor(x);}
+    int getY() {return (int)floor(y);}
+    int getR() {return r;}
+    int getG() {return g;}
+    int getB() {return b;}
     
     void move(double time_delta);
 };
