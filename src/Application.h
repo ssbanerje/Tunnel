@@ -3,6 +3,7 @@
 
 #include "ofMain.h"
 
+#include "GameMode.h"
 #include "Tunnel.h"
 #include "LookupMath.h"
 #include "Ship.h"

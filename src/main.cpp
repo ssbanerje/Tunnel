@@ -2,15 +2,14 @@
 #include "ofAppGlutWindow.h"
 
 #include "Application.h"
+#include "GameMode.h"
 
-#define WIDTH 1024
-#define HEIGHT 768
 
 //========================================================================
 int main( ){
 
     ofAppGlutWindow window;
-	ofSetupOpenGL(&window, WIDTH, HEIGHT, OF_WINDOW);
+	ofSetupOpenGL(&window, WIDTH, HEIGHT, WINDOW_MODE);
 
 	ofRunApp(new Application());
 }

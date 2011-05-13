@@ -8,7 +8,7 @@ void Application::setup() {
     ofBackground(0, 0, 0);
     ofSetWindowShape(ofGetWidth(), ofGetHeight());
     ofSetWindowPosition(10, 10);
-    ofSetFrameRate(30);
+    ofSetFrameRate(40);
     ofSetWindowTitle("Tunnel");
     
     ofSeedRandom();
@@ -48,11 +48,13 @@ void Application::exit() {
 //--------------------------------------------------------------
 void Application::keyPressed(int key) {
     switch (key) {
+#ifndef GAME
         case 'f':
         case 'F':
             ofToggleFullscreen();
             tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
             break;
+#endif
         case 'w':
         case 'W':
         case OF_KEY_UP:

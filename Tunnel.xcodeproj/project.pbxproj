@@ -149,6 +149,7 @@
 		F727B8BD137A725800AF4FE0 /* ofx3DModelLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofx3DModelLoader.h; sourceTree = "<group>"; };
 		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		F74C06EA137CFD0700D957EB /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
+		F74C06FE137D0F4C00D957EB /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
 		F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSource.cpp; sourceTree = "<group>"; };
 		F7DEEA13137BD9FC0077048F /* ParticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSource.h; sourceTree = "<group>"; };
 		F7DEEA15137BDB4C0077048F /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
@@ -398,6 +399,7 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				F727B89B137A71B300AF4FE0 /* Application.cpp */,
 				F727B89C137A71B300AF4FE0 /* Application.h */,
+				F74C06FE137D0F4C00D957EB /* GameMode.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
