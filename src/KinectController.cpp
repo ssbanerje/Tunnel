@@ -26,7 +26,6 @@ void KinectController::initialize(Ship *s, LookupMath *m) {
     farThreshold = 185;
     scaleFactor_w = ofGetWidth()/(float)kinect.width;
     scaleFactor_h = ofGetHeight()/(float)kinect.height;
-    ofLog(OF_LOG_VERBOSE, "%f %f", scaleFactor_w, scaleFactor_h);
     
     clrImg.allocate(kinect.width, kinect.height);
     depthImg.allocate(kinect.width, kinect.height);
@@ -75,10 +74,7 @@ void KinectController::updateShip() {
             ship->incRot();
         else if(tanAngle<-0.577)
             ship->decRot();
-        if(ht<kinect.height/3.0)
-            ship->incSpeed();
-        else if(ht>2*kinect.height/3.0)
-            ship->decSpeed();            
+        ship->setScaleSpeed(((float)abs(b2->x-b1->x)+abs(b2->y-b1->y))/(kinect.width+kinect.height));
     }
 }
 
