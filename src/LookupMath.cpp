@@ -63,7 +63,7 @@ float LookupMath::arcTanLookup(float x) {
         hi = ARR_LEN/4;
     }
     while (lo<hi) {
-        mid = lo+hi/2;
+        mid = (lo+hi)/2;
         if (x<tanArr[mid])
             hi = mid;
         else if(x>tanArr[mid])
