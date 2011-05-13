@@ -60,5 +60,19 @@ void KinectController::updateShip() {
 
 //--------------------------------------------------------------
 void KinectController::draw() {
-    
+    ofPushStyle();
+    ofPushMatrix();
+        ofSetColor(200, 200, 200, 25);
+        ofFill();
+        ofRect(0, 10, ofGetWidth(), 240+20);
+        ofSetColor(255, 255, 255);
+        string data = "NT: "+ofToString(nearThreshold)+"\nFT: "+ofToString(farThreshold)+"\nANGLE: "+ofToString(angle);
+        ofDrawBitmapString(data, 20, 50);
+        ofTranslate(20+ofGetWidth()/5, 20);
+        clrImg.draw(0, 0, 320, 240);
+        depthImg.draw(330, 0, 320, 240);
+        thImg.draw(660, 0, 320, 240);
+        contours.draw(660, 0, 320, 240);
+    ofPopMatrix();
+    ofPopStyle();
 }

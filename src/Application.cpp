@@ -96,11 +96,13 @@ void Application::keyPressed(int key) {
             break;
         case ',':
             kinect.decAngle();
+            break;
         case '<':
             kinect.incAngle();
+            break;
         case 'k':
         case 'K':
-            showKinectMenu != showKinectMenu;
+            showKinectMenu = !showKinectMenu;
             break;
         default:
             break;
