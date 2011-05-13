@@ -14,6 +14,7 @@ void Application::setup() {
     ofSeedRandom();
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
+    ofHideCursor();
     
     glLoadIdentity();
     
