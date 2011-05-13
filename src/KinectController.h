@@ -13,10 +13,13 @@ class KinectController {
 private:
     Ship *ship;
     LookupMath *math;
+    ofPoint *b1,*b2;
     
     int nearThreshold;
     int farThreshold;
     float angle;
+    float scaleFactor_w;
+    float scaleFactor_h;
     ofxKinect kinect;
     
     ofxCvColorImage clrImg;
