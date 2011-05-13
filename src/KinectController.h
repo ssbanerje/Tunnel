@@ -20,6 +20,7 @@ private:
     float angle;
     float scaleFactor_w;
     float scaleFactor_h;
+    bool trackingHands;
     ofxKinect kinect;
     
     ofxCvColorImage clrImg;

@@ -3,11 +3,6 @@
 #define SHOW_HAND_POS
 
 //--------------------------------------------------------------
-float tanAnglePoints(const ofPoint *p1, const ofPoint *p2) {
-    return (p2->y - p1->y)/(p2->x - p1->x);
-}
-
-//--------------------------------------------------------------
 KinectController::~KinectController() {
     ofLog(OF_LOG_VERBOSE, "KinectController::~KinectController()");
     kinect.setCameraTiltAngle(0);
@@ -21,6 +16,7 @@ void KinectController::initialize(Ship *s, LookupMath *m) {
     kinect.init();
     kinect.open();
     kinect.setCameraTiltAngle(angle);
+    trackingHands = false;
     
     nearThreshold = 230;
     farThreshold = 185;
@@ -58,23 +54,46 @@ void KinectController::setImages() {
         if (pixels[i]<farThreshold || pixels[i]>nearThreshold) {
             pixels[i] = 0;
         }
+        else {
+            pixels[i] = 255;
+        }
     }
     thImg.setFromPixels(pixels, kinect.width, kinect.height);
 }
 
 //--------------------------------------------------------------
+bool isLeft(ofPoint *x1, ofPoint *x2) {
+    return x1->x<x2->x ? true : false;
+}
+
+//--------------------------------------------------------------
+bool isAbove(ofPoint *x1, ofPoint *x2) {
+    return x1->y<x2->y ? true : false;
+}
+
+//--------------------------------------------------------------
 void KinectController::updateShip() {
     if(contours.blobs.size() == 2) {
-        b1 = contours.blobs[0].centroid.x<=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
-        b2 = contours.blobs[0].centroid.x>=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
-        float tanAngle = tanAnglePoints(b1,b2);
-        float ht = (b1->y+b2->y)/2;
-        if(tanAngle>0.577) // 30 deg
-            ship->incRot();
-        else if(tanAngle<-0.577)
-            ship->decRot();
-        ship->setScaleSpeed(((float)abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.5));
+        if(!trackingHands) {
+            b1 = contours.blobs[0].centroid.x<=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
+            b2 = contours.blobs[0].centroid.x>=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
+        }
+        float tan = (b2->y - b1->y)/(b2->x - b1->x);
+        float arctan = math->arcTanLookup(tan);
+        if(isLeft(b1,b2) && isAbove(b1,b2))
+            arctan -= PI;
+        else if(!isLeft(b1,b2) && isAbove(b1,b2))
+            arctan = -arctan;
+        else if(!isLeft(b1,b2) && !isAbove(b1,b2))
+            arctan += TWO_PI;
+        ship->setScaleSpeed((abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.5));
+        ship->setScaleRot(arctan/TWO_PI);
+        trackingHands = true;
     }
+    else {
+        trackingHands = false;
+    }
+    
 }
 
 //--------------------------------------------------------------
