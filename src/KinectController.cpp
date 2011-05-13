@@ -1,6 +1,14 @@
 #include "KinectController.h"
 
-#define SHOW_HAND_POS
+//--------------------------------------------------------------
+bool isLeft(ofPoint *x1, ofPoint *x2) {
+    return x1->x<x2->x ? true : false;
+}
+
+//--------------------------------------------------------------
+bool isAbove(ofPoint *x1, ofPoint *x2) {
+    return x1->y<x2->y ? true : false;
+}
 
 //--------------------------------------------------------------
 KinectController::~KinectController() {
@@ -62,16 +70,6 @@ void KinectController::setImages() {
 }
 
 //--------------------------------------------------------------
-bool isLeft(ofPoint *x1, ofPoint *x2) {
-    return x1->x<x2->x ? true : false;
-}
-
-//--------------------------------------------------------------
-bool isAbove(ofPoint *x1, ofPoint *x2) {
-    return x1->y<x2->y ? true : false;
-}
-
-//--------------------------------------------------------------
 void KinectController::updateShip() {
     if(contours.blobs.size() == 2) {
         if(!trackingHands) {
@@ -117,14 +115,12 @@ void KinectController::draw() {
         thImg.draw(2*width+20, 0, width, height);
         contours.draw(2*width+20, 0, width, height);
     ofPopMatrix();
-#ifdef SHOW_HAND_POS
-    if(b1 && b2) {
+    if(trackingHands) {
         ofSetColor(255, 0, 0);
         ofCircle(scaleFactor_w*b1->x, scaleFactor_h*b1->y, 15);
         ofCircle(scaleFactor_w*b2->x, scaleFactor_h*b2->y, 15);
         ofSetColor(200, 200, 255, 50);
         ofLine(scaleFactor_w*b1->x, scaleFactor_h*b1->y, scaleFactor_w*b2->x, scaleFactor_h*b2->y);
     }
-#endif
     ofPopStyle();
 }
