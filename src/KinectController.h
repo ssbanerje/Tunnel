@@ -3,6 +3,8 @@
 
 #include "ofAppRunner.h"
 #include "ofGraphics.h"
+#include "ofxOpenCv.h"
+#include "ofxKinect.h"
 
 #include "Ship.h"
 #include "LookupMath.h"
@@ -14,7 +16,19 @@ private:
     
     int nearThreshold;
     int farThreshold;
+    float angle;
+    ofxKinect kinect;
+    
+    ofxCvColorImage clrImg;
+    ofxCvGrayscaleImage depthImg;
+    ofxCvGrayscaleImage thImg;
+    ofxCvContourFinder contours;
+    
+    void setImages();
+    void updateShip();
+    
 public:
+    KinectController();
     ~KinectController();
     void initialize(Ship *s, LookupMath *m);
     void update();
@@ -24,6 +38,8 @@ public:
     void decNearThreshold() {nearThreshold>=0?nearThreshold--:0;}
     void incFarThreshold() {nearThreshold<=255?nearThreshold++:0;}
     void decFarThreshold() {nearThreshold>=0?nearThreshold--:0;}
+    void incAngle() {angle<30.0?angle++:0;}
+    void decAngle() {angle>-30.0?angle--:0;}
 };
 
 #endif

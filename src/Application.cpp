@@ -8,7 +8,7 @@ void Application::setup() {
     ofBackground(0, 0, 0);
     ofSetWindowShape(ofGetWidth(), ofGetHeight());
     ofSetWindowPosition(10, 10);
-    ofSetFrameRate(40);
+    ofSetFrameRate(30);
     ofSetWindowTitle("Tunnel");
     
     ofSeedRandom();
@@ -21,7 +21,7 @@ void Application::setup() {
     tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
     ship.initialize(&m);
     kinect.initialize(&ship,&m);
-    showKinectMenu = false;
+    showKinectMenu = true;
 }
 
 //--------------------------------------------------------------
@@ -94,6 +94,10 @@ void Application::keyPressed(int key) {
         case 'M':
             kinect.incFarThreshold();
             break;
+        case ',':
+            kinect.decAngle();
+        case '<':
+            kinect.incAngle();
         case 'k':
         case 'K':
             showKinectMenu != showKinectMenu;

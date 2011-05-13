@@ -1,8 +1,26 @@
 #include "KinectController.h"
 
 //--------------------------------------------------------------
-KinectController::~KinectController() {
+KinectController::KinectController() {
+    ofLog(OF_LOG_VERBOSE, "KinectController::KinectController()");
+    angle = 0;
+    kinect.init();
+    kinect.open();
+    kinect.setCameraTiltAngle(angle);
     
+    nearThreshold = 255;
+    farThreshold = 100;
+    
+    clrImg.allocate(kinect.width, kinect.height);
+    depthImg.allocate(kinect.width, kinect.height);
+    thImg.allocate(kinect.width, kinect.height);
+}
+
+//--------------------------------------------------------------
+KinectController::~KinectController() {
+    ofLog(OF_LOG_VERBOSE, "KinectController::~KinectController()");
+    kinect.setCameraTiltAngle(0);
+	kinect.close();
 }
 
 //--------------------------------------------------------------
@@ -13,6 +31,30 @@ void KinectController::initialize(Ship *s, LookupMath *m) {
 
 //--------------------------------------------------------------
 void KinectController::update() {
+    kinect.setCameraTiltAngle(angle);
+    kinect.update();
+    if(kinect.isFrameNew()) {
+        setImages();
+        contours.findContours(thImg, 250, 10000000, 10, false, true);
+        updateShip();
+    }
+}
+
+//--------------------------------------------------------------
+void KinectController::setImages() {
+    clrImg.setFromPixels(kinect.getPixels(), kinect.width, kinect.height);
+    depthImg.setFromPixels(kinect.getDepthPixels(), kinect.width, kinect.height);
+    register unsigned char *pixels = kinect.getDepthPixels();
+    for(register int i=0;i<kinect.height*kinect.width;i++) {
+        if (pixels[i]<farThreshold || pixels[i]>nearThreshold) {
+            pixels[i] = 0;
+        }
+    }
+    thImg.setFromPixels(pixels, kinect.width, kinect.height);
+}
+
+//--------------------------------------------------------------
+void KinectController::updateShip() {
     
 }
 
