@@ -1,5 +1,7 @@
 #include "KinectController.h"
 
+#include <math.h>
+
 //--------------------------------------------------------------
 bool isLeft(ofPoint *x1, ofPoint *x2) {
     return x1->x<x2->x ? true : false;
@@ -25,6 +27,7 @@ void KinectController::initialize(Ship *s, LookupMath *m) {
     kinect.open();
     kinect.setCameraTiltAngle(angle);
     trackingHands = false;
+    trackingAngle = 0;
     
     nearThreshold = 230;
     farThreshold = 185;
@@ -76,17 +79,22 @@ void KinectController::updateShip() {
             b1 = contours.blobs[0].centroid.x<=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
             b2 = contours.blobs[0].centroid.x>=contours.blobs[1].centroid.x ? &(contours.blobs[0].centroid) : &(contours.blobs[1].centroid);
         }
-        float tan = (b2->y - b1->y)/(b2->x - b1->x);
-        float arctan = math->arcTanLookup(tan);
-        if(isLeft(b1,b2) && isAbove(b1,b2))
-            arctan -= PI;
-        else if(!isLeft(b1,b2) && isAbove(b1,b2))
-            arctan = -arctan;
-        else if(!isLeft(b1,b2) && !isAbove(b1,b2))
-            arctan += TWO_PI;
-        ship->setScaleSpeed((abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.5));
-        ship->setScaleRot(arctan/TWO_PI);
+        float t = (b2->y - b1->y)/(b2->x - b1->x);
+        float at = atan(t);
+        if(!isLeft(b1,b2) && isAbove(b1,b2))
+            if(trackingAngle<0)
+                at -= PI;
+            else
+                at += PI;
+        else if(!isLeft(b1,b2) && !isAbove(b1,b2))//TWO CASES
+            if(trackingAngle<0)
+                at -= PI;
+            else
+                at += PI;
+        ship->setScaleSpeed((abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.3));
+        ship->setScaleRot(at/TWO_PI);
         trackingHands = true;
+        trackingAngle = at;
     }
     else {
         trackingHands = false;
