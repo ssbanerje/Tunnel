@@ -6,21 +6,12 @@ LookupMath::LookupMath() {
     for (register int i=0; i<ARR_LEN; i++) {
         sinArr[i] = sinf(TWO_PI/ARR_LEN * i);
         cosArr[i] = cosf(TWO_PI/ARR_LEN * i);
-        tanArr[i] = tanf(TWO_PI/ARR_LEN * i);
+        atanArr[i] = atanf(-MAX_TAN + i*MAX_TAN/ARR_LEN);
     }
 }
 
 //--------------------------------------------------------------
 float LookupMath::sinLookup(float x) {
-    int t = x<0?-1:1;
-    x *= t;
-    int r = (int) (x/TWO_PI);
-    x -= r*TWO_PI;
-    return t*sinArr[(int)(x/TWO_PI*ARR_LEN)];
-}
-
-//--------------------------------------------------------------
-float LookupMath::tanLookup(float x) {
     int t = x<0?-1:1;
     x *= t;
     int r = (int) (x/TWO_PI);
@@ -47,35 +38,26 @@ float LookupMath::cosLookupD(float x) {
 }
 
 //--------------------------------------------------------------
-float LookupMath::tanLookupD(float x) {
-    return sinLookup(x*TWO_PI/360);
-}
-
-//--------------------------------------------------------------
-float LookupMath::arcTanLookup(float x) {
-    register int lo,hi,mid;
-    if(x<0) {
-        lo = ARR_LEN/4;
-        hi = ARR_LEN/2;
-    }
-    else {
-        lo = 0;
-        hi = ARR_LEN/4;
-    }
-    while (lo<hi) {
+float LookupMath::atanLookup(float x) {
+    int lo, hi, mid;
+    lo = 0;
+    hi = ARR_LEN;
+    while (lo<=hi) {
         mid = (lo+hi)/2;
-        if (x<tanArr[mid])
+        if (atanArr[mid]<x) {
             hi = mid;
-        else if(x>tanArr[mid])
+        }
+        else if (atanArr[mid]>x) {
             lo = mid;
-        else
+        }
+        else {
             break;
+        }
     }
-    mid = (lo+hi)/2;
-    return TWO_PI*mid/ARR_LEN;
+    return -PI/2 + mid*PI/ARR_LEN;
 }
 
 //--------------------------------------------------------------
-float LookupMath::arcTanLookupD(float x) {
-    return arcTanLookup(x)*360/TWO_PI;
+float LookupMath::atanLookupD(float x) {
+    return atanLookup(x)*360/TWO_PI;
 }
