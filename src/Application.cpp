@@ -5,6 +5,8 @@ void Application::setup() {
     ofSetLogLevel(0);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
+    m.initialize();
+    
     ofBackground(0, 0, 0);
     ofSetWindowShape(ofGetWidth(), ofGetHeight());
     ofSetWindowPosition(10, 10);

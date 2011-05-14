@@ -14,7 +14,7 @@ private:
     float atanArr[ARR_LEN];
     
 public:
-    LookupMath();
+    void initialize();
     float sinLookup(float x);
     float cosLookup(float x);
     float sinLookupD(float x);

@@ -1,12 +1,12 @@
 #include "LookupMath.h"
 
 //--------------------------------------------------------------
-LookupMath::LookupMath() {
+void LookupMath::initialize() {
     ofLog(OF_LOG_VERBOSE, "Math::Math()");
     for (register int i=0; i<ARR_LEN; i++) {
         sinArr[i] = sinf(TWO_PI/ARR_LEN * i);
         cosArr[i] = cosf(TWO_PI/ARR_LEN * i);
-        atanArr[i] = atanf(-MAX_TAN + i*MAX_TAN/ARR_LEN);
+        atanArr[i] = atanf(-MAX_TAN + 2*i*MAX_TAN/ARR_LEN);
     }
 }
 
@@ -39,22 +39,9 @@ float LookupMath::cosLookupD(float x) {
 
 //--------------------------------------------------------------
 float LookupMath::atanLookup(float x) {
-    int lo, hi, mid;
-    lo = 0;
-    hi = ARR_LEN;
-    while (lo<=hi) {
-        mid = (lo+hi)/2;
-        if (atanArr[mid]<x) {
-            hi = mid;
-        }
-        else if (atanArr[mid]>x) {
-            lo = mid;
-        }
-        else {
-            break;
-        }
-    }
-    return -PI/2 + mid*PI/ARR_LEN;
+    if(x>MAX_TAN)   return PI/2;
+    else if(x<-MAX_TAN) return -PI/2;
+    return atanArr[ARR_LEN + (int)((x-MAX_TAN)*0.5*ARR_LEN/MAX_TAN)];
 }
 
 //--------------------------------------------------------------
