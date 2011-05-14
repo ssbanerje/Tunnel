@@ -1,7 +1,5 @@
 #include "KinectController.h"
 
-#include <math.h>
-
 //--------------------------------------------------------------
 bool isLeft(ofPoint *x1, ofPoint *x2) {
     return x1->x<x2->x ? true : false;
