@@ -9,5 +9,8 @@ ofxOpenCv
 ofxKinect
 ofxThread
 ofxVectorMath
+MSACore
+MSAPingPong
+MSAOpenCL
 
 Tunnel was built against v0.062 of openFrameworks
