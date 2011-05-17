@@ -3,11 +3,28 @@
 //--------------------------------------------------------------
 void LookupMath::initialize() {
     ofLog(OF_LOG_VERBOSE, "Math::Math()");
-    for (register int i=0; i<ARR_LEN; i++) {
-        sinArr[i] = sinf(TWO_PI/ARR_LEN * i);
-        cosArr[i] = cosf(TWO_PI/ARR_LEN * i);
-        atanArr[i] = atanf(-MAX_TAN + 2*i*MAX_TAN/ARR_LEN);
-    }
+    MSA::OpenCL opencl;
+    opencl.setup(CL_DEVICE_TYPE_GPU, 2);
+    opencl.loadProgramFromFile("BuildMath.cl", false);
+    MSA::OpenCLKernel* sinKernel = opencl.loadKernel("sine");
+    MSA::OpenCLKernel* cosKernel = opencl.loadKernel("cosine");
+    MSA::OpenCLKernel* atanKernel = opencl.loadKernel("arctan");
+    MSA::OpenCLBuffer clBuf[3];
+    clBuf[0].initBuffer(ARR_LEN*sizeof(float), CL_MEM_READ_WRITE);
+    clBuf[1].initBuffer(ARR_LEN*sizeof(float), CL_MEM_READ_WRITE);
+    clBuf[2].initBuffer(ARR_LEN*sizeof(float), CL_MEM_READ_WRITE);
+    sinKernel->setArg(0, clBuf[0].getCLMem());
+    cosKernel->setArg(0, clBuf[1].getCLMem());
+    atanKernel->setArg(0, clBuf[2].getCLMem());
+    opencl.finish();
+    sinKernel->run1D(ARR_LEN);
+    cosKernel->run1D(ARR_LEN);
+    atanKernel->run1D(ARR_LEN);
+    opencl.finish();
+    clBuf[0].read(sinArr, 0, ARR_LEN*sizeof(float));
+    clBuf[1].read(cosArr, 0, ARR_LEN*sizeof(float));
+    clBuf[2].read(atanArr, 0, ARR_LEN*sizeof(float));
+    opencl.finish();
 }
 
 //--------------------------------------------------------------

@@ -3,9 +3,11 @@
 
 #include "ofMath.h"
 #include "ofConstants.h"
+#include "MSAOpenCL.h"
 
+//have to be dfined again in opencl file
 #define ARR_LEN 1000
-#define MAX_TAN 57.29
+#define MAX_TAN 57.29f
 
 class LookupMath {
 private:

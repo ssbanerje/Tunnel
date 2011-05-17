@@ -32,6 +32,17 @@
 		E4C2429410CC5C38004149E2 /* freetype.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C2429310CC5C38004149E2 /* freetype.a */; };
 		E4C242CD10CC650E004149E2 /* libfmodex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C242CC10CC650E004149E2 /* libfmodex.dylib */; };
 		E4C246DA10CCAE22004149E2 /* freeimage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C246D910CCAE22004149E2 /* freeimage.a */; };
+		F71B24CD13824BB200883962 /* MSAOpenCL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24B613824BB200883962 /* MSAOpenCL.cpp */; };
+		F71B24CE13824BB200883962 /* MSAOpenCLBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24B813824BB200883962 /* MSAOpenCLBuffer.cpp */; };
+		F71B24CF13824BB200883962 /* MSAOpenCLImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24BA13824BB200883962 /* MSAOpenCLImage.cpp */; };
+		F71B24D013824BB200883962 /* MSAOpenCLKernel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24BD13824BB200883962 /* MSAOpenCLKernel.cpp */; };
+		F71B24D113824BB200883962 /* MSAOpenCLMemoryObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24BF13824BB200883962 /* MSAOpenCLMemoryObject.cpp */; };
+		F71B24D213824BB200883962 /* MSAOpenCLProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24C113824BB200883962 /* MSAOpenCLProgram.cpp */; };
+		F71B24D413824BD500883962 /* OpenCL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F71B24D313824BD500883962 /* OpenCL.framework */; };
+		F71B24DE13824EF700883962 /* BuildMath.cl in Sources */ = {isa = PBXBuildFile; fileRef = F71B24DD13824EF700883962 /* BuildMath.cl */; };
+		F71B24DF1382515A00883962 /* BuildMath.cl in Copy Files */ = {isa = PBXBuildFile; fileRef = F71B24DD13824EF700883962 /* BuildMath.cl */; };
+		F71B24F0138251B500883962 /* Color.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24E6138251B500883962 /* Color.cpp */; };
+		F71B24F1138251B500883962 /* MSACoreGL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F71B24ED138251B500883962 /* MSACoreGL.cpp */; };
 		F727B8A8137A71B300AF4FE0 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B89B137A71B300AF4FE0 /* Application.cpp */; };
 		F727B8AA137A71B300AF4FE0 /* LookupMath.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */; };
 		F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8A4137A71B300AF4FE0 /* Ship.cpp */; };
@@ -81,6 +92,7 @@
 			dstPath = ./data;
 			dstSubfolderSpec = 16;
 			files = (
+				F71B24DF1382515A00883962 /* BuildMath.cl in Copy Files */,
 				F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */,
 				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in Copy Files */,
 				F727B8AE137A722B00AF4FE0 /* psionic.jpg in Copy Files */,
@@ -128,6 +140,38 @@
 		E4C2429310CC5C38004149E2 /* freetype.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freetype.a; path = ../../../libs/freetype/lib/osx/freetype.a; sourceTree = SOURCE_ROOT; };
 		E4C242CC10CC650E004149E2 /* libfmodex.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmodex.dylib; path = ../../../libs/fmodex/lib/osx/libfmodex.dylib; sourceTree = SOURCE_ROOT; };
 		E4C246D910CCAE22004149E2 /* freeimage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = freeimage.a; path = ../../../libs/FreeImage/lib/osx/freeimage.a; sourceTree = SOURCE_ROOT; };
+		F71B24B313824BB200883962 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		F71B24B413824BB200883962 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		F71B24B613824BB200883962 /* MSAOpenCL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCL.cpp; sourceTree = "<group>"; };
+		F71B24B713824BB200883962 /* MSAOpenCL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCL.h; sourceTree = "<group>"; };
+		F71B24B813824BB200883962 /* MSAOpenCLBuffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLBuffer.cpp; sourceTree = "<group>"; };
+		F71B24B913824BB200883962 /* MSAOpenCLBuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLBuffer.h; sourceTree = "<group>"; };
+		F71B24BA13824BB200883962 /* MSAOpenCLImage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLImage.cpp; sourceTree = "<group>"; };
+		F71B24BB13824BB200883962 /* MSAOpenCLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLImage.h; sourceTree = "<group>"; };
+		F71B24BC13824BB200883962 /* MSAOpenCLImagePingPong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLImagePingPong.h; sourceTree = "<group>"; };
+		F71B24BD13824BB200883962 /* MSAOpenCLKernel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLKernel.cpp; sourceTree = "<group>"; };
+		F71B24BE13824BB200883962 /* MSAOpenCLKernel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLKernel.h; sourceTree = "<group>"; };
+		F71B24BF13824BB200883962 /* MSAOpenCLMemoryObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLMemoryObject.cpp; sourceTree = "<group>"; };
+		F71B24C013824BB200883962 /* MSAOpenCLMemoryObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLMemoryObject.h; sourceTree = "<group>"; };
+		F71B24C113824BB200883962 /* MSAOpenCLProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSAOpenCLProgram.cpp; sourceTree = "<group>"; };
+		F71B24C213824BB200883962 /* MSAOpenCLProgram.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLProgram.h; sourceTree = "<group>"; };
+		F71B24C313824BB200883962 /* MSAOpenCLTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAOpenCLTypes.h; sourceTree = "<group>"; };
+		F71B24D313824BD500883962 /* OpenCL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenCL.framework; path = /System/Library/Frameworks/OpenCL.framework; sourceTree = "<absolute>"; };
+		F71B24DD13824EF700883962 /* BuildMath.cl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.opencl; path = BuildMath.cl; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.c; };
+		F71B24E1138251B500883962 /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
+		F71B24E4138251B500883962 /* ChanTraits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChanTraits.h; sourceTree = "<group>"; };
+		F71B24E5138251B500883962 /* CinderMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderMath.h; sourceTree = "<group>"; };
+		F71B24E6138251B500883962 /* Color.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Color.cpp; sourceTree = "<group>"; };
+		F71B24E7138251B500883962 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		F71B24E8138251B500883962 /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		F71B24E9138251B500883962 /* MSACore-Cinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSACore-Cinder.h"; sourceTree = "<group>"; };
+		F71B24EA138251B500883962 /* MSACore-OF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSACore-OF.h"; sourceTree = "<group>"; };
+		F71B24EB138251B500883962 /* MSACore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSACore.h; sourceTree = "<group>"; };
+		F71B24EC138251B500883962 /* MSACoreCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSACoreCommon.h; sourceTree = "<group>"; };
+		F71B24ED138251B500883962 /* MSACoreGL.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MSACoreGL.cpp; sourceTree = "<group>"; };
+		F71B24EE138251B500883962 /* MSACoreGL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSACoreGL.h; sourceTree = "<group>"; };
+		F71B24EF138251B500883962 /* MSACoreMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSACoreMath.h; sourceTree = "<group>"; };
+		F71B24F4138251BD00883962 /* MSAPingPong.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSAPingPong.h; sourceTree = "<group>"; };
 		F727B89B137A71B300AF4FE0 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		F727B89C137A71B300AF4FE0 /* Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Application.h; sourceTree = "<group>"; };
 		F727B89E137A71B300AF4FE0 /* fighter1.3ds */ = {isa = PBXFileReference; lastKnownFileType = file; path = fighter1.3ds; sourceTree = "<group>"; };
@@ -161,6 +205,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F71B24D413824BD500883962 /* OpenCL.framework in Frameworks */,
 				E4C2422B10CC554B004149E2 /* openFrameworksDebug.a in Frameworks */,
 				E45BE0AA0E8CC67C009D7055 /* GLee.a in Frameworks */,
 				E45BE2E40E8CC69C009D7055 /* rtAudio.a in Frameworks */,
@@ -194,6 +239,9 @@
 		BB4B018C10F6955C006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
+				F71B24F2138251BD00883962 /* MSAPingPong */,
+				F71B24E0138251B500883962 /* MSACore */,
+				F71B249713824BB200883962 /* MSAOpenCL */,
 				F727B8B2137A725800AF4FE0 /* ofx3DModelLoader */,
 			);
 			name = addons;
@@ -487,6 +535,93 @@
 			path = ../../../libs/FreeImage/lib/osx;
 			sourceTree = SOURCE_ROOT;
 		};
+		F71B249713824BB200883962 /* MSAOpenCL */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24D313824BD500883962 /* OpenCL.framework */,
+				F71B24B313824BB200883962 /* install.xml */,
+				F71B24B413824BB200883962 /* LICENSE.txt */,
+				F71B24B513824BB200883962 /* src */,
+			);
+			name = MSAOpenCL;
+			path = ../../../addons/MSAOpenCL;
+			sourceTree = "<group>";
+		};
+		F71B24B513824BB200883962 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24B613824BB200883962 /* MSAOpenCL.cpp */,
+				F71B24B713824BB200883962 /* MSAOpenCL.h */,
+				F71B24B813824BB200883962 /* MSAOpenCLBuffer.cpp */,
+				F71B24B913824BB200883962 /* MSAOpenCLBuffer.h */,
+				F71B24BA13824BB200883962 /* MSAOpenCLImage.cpp */,
+				F71B24BB13824BB200883962 /* MSAOpenCLImage.h */,
+				F71B24BC13824BB200883962 /* MSAOpenCLImagePingPong.h */,
+				F71B24BD13824BB200883962 /* MSAOpenCLKernel.cpp */,
+				F71B24BE13824BB200883962 /* MSAOpenCLKernel.h */,
+				F71B24BF13824BB200883962 /* MSAOpenCLMemoryObject.cpp */,
+				F71B24C013824BB200883962 /* MSAOpenCLMemoryObject.h */,
+				F71B24C113824BB200883962 /* MSAOpenCLProgram.cpp */,
+				F71B24C213824BB200883962 /* MSAOpenCLProgram.h */,
+				F71B24C313824BB200883962 /* MSAOpenCLTypes.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F71B24E0138251B500883962 /* MSACore */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24E1138251B500883962 /* install.xml */,
+				F71B24E2138251B500883962 /* src */,
+			);
+			name = MSACore;
+			path = ../../../addons/MSACore;
+			sourceTree = "<group>";
+		};
+		F71B24E2138251B500883962 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24E3138251B500883962 /* cinder-lite */,
+				F71B24E9138251B500883962 /* MSACore-Cinder.h */,
+				F71B24EA138251B500883962 /* MSACore-OF.h */,
+				F71B24EB138251B500883962 /* MSACore.h */,
+				F71B24EC138251B500883962 /* MSACoreCommon.h */,
+				F71B24ED138251B500883962 /* MSACoreGL.cpp */,
+				F71B24EE138251B500883962 /* MSACoreGL.h */,
+				F71B24EF138251B500883962 /* MSACoreMath.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		F71B24E3138251B500883962 /* cinder-lite */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24E4138251B500883962 /* ChanTraits.h */,
+				F71B24E5138251B500883962 /* CinderMath.h */,
+				F71B24E6138251B500883962 /* Color.cpp */,
+				F71B24E7138251B500883962 /* Color.h */,
+				F71B24E8138251B500883962 /* Vector.h */,
+			);
+			path = "cinder-lite";
+			sourceTree = "<group>";
+		};
+		F71B24F2138251BD00883962 /* MSAPingPong */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24F3138251BD00883962 /* src */,
+			);
+			name = MSAPingPong;
+			path = ../../../addons/MSAPingPong;
+			sourceTree = "<group>";
+		};
+		F71B24F3138251BD00883962 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F71B24F4138251BD00883962 /* MSAPingPong.h */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		F727B89D137A71B300AF4FE0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +692,7 @@
 			children = (
 				F727B8A1137A71B300AF4FE0 /* LookupMath.cpp */,
 				F727B8A2137A71B300AF4FE0 /* LookupMath.h */,
+				F71B24DD13824EF700883962 /* BuildMath.cl */,
 			);
 			name = Math;
 			sourceTree = "<group>";
@@ -653,6 +789,15 @@
 				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
 				F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */,
 				F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */,
+				F71B24CD13824BB200883962 /* MSAOpenCL.cpp in Sources */,
+				F71B24CE13824BB200883962 /* MSAOpenCLBuffer.cpp in Sources */,
+				F71B24CF13824BB200883962 /* MSAOpenCLImage.cpp in Sources */,
+				F71B24D013824BB200883962 /* MSAOpenCLKernel.cpp in Sources */,
+				F71B24D113824BB200883962 /* MSAOpenCLMemoryObject.cpp in Sources */,
+				F71B24D213824BB200883962 /* MSAOpenCLProgram.cpp in Sources */,
+				F71B24DE13824EF700883962 /* BuildMath.cl in Sources */,
+				F71B24F0138251B500883962 /* Color.cpp in Sources */,
+				F71B24F1138251B500883962 /* MSACoreGL.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
