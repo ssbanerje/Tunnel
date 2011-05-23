@@ -57,6 +57,8 @@ void Application::keyPressed(int key) {
             tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
             break;
 #endif
+        case OF_KEY_ESC:
+            OF_EXIT_APP(0);
         case 'w':
         case 'W':
         case OF_KEY_UP:
