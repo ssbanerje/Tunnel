@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void Application::setup() {
-    ofSetLogLevel(0);
+    ofSetLogLevel(OF_LOG_ERROR);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
     m.initialize();
@@ -64,6 +64,8 @@ void Application::keyPressed(int key) {
             tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
             break;
 #endif
+        case OF_KEY_ESC:
+            OF_EXIT_APP(0);
         case 'w':
         case 'W':
         case OF_KEY_UP:

@@ -55,8 +55,6 @@
 		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
 		F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = F74C06EA137CFD0700D957EB /* Courier New.ttf */; };
 		F7961784138AD48400F74282 /* BuildMath.cl in Copy Files */ = {isa = PBXBuildFile; fileRef = F71B2507138256C900883962 /* BuildMath.cl */; };
-		F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */; };
-		F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA15137BDB4C0077048F /* Particle.cpp */; };
 		F7EAE7C9137D13EC006BFCDD /* openCV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EAE7B7137D13EC006BFCDD /* openCV.a */; };
 		F7EAE7CA137D13EC006BFCDD /* ofxCvColorImage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7EAE7BA137D13EC006BFCDD /* ofxCvColorImage.cpp */; };
 		F7EAE7CB137D13EC006BFCDD /* ofxCvContourFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7EAE7BD137D13EC006BFCDD /* ofxCvContourFinder.cpp */; };
@@ -217,10 +215,6 @@
 		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		F74C06EA137CFD0700D957EB /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
 		F74C06FE137D0F4C00D957EB /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
-		F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSource.cpp; sourceTree = "<group>"; };
-		F7DEEA13137BD9FC0077048F /* ParticleSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSource.h; sourceTree = "<group>"; };
-		F7DEEA15137BDB4C0077048F /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
-		F7DEEA16137BDB4C0077048F /* Particle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Particle.h; sourceTree = "<group>"; };
 		F7EAE7A1137D13EC006BFCDD /* install.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = install.xml; sourceTree = "<group>"; };
 		F7EAE7A5137D13EC006BFCDD /* cv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cv.h; sourceTree = "<group>"; };
 		F7EAE7A6137D13EC006BFCDD /* cv.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = cv.hpp; sourceTree = "<group>"; };
@@ -782,10 +776,6 @@
 			children = (
 				F727B8A6137A71B300AF4FE0 /* Tunnel.cpp */,
 				F727B8A7137A71B300AF4FE0 /* Tunnel.h */,
-				F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */,
-				F7DEEA13137BD9FC0077048F /* ParticleSource.h */,
-				F7DEEA15137BDB4C0077048F /* Particle.cpp */,
-				F7DEEA16137BDB4C0077048F /* Particle.h */,
 			);
 			name = Background;
 			sourceTree = "<group>";
@@ -1140,8 +1130,6 @@
 				F727B8BF137A725800AF4FE0 /* texture3DS.cpp in Sources */,
 				F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */,
 				F727B8AB137A71B300AF4FE0 /* Ship.cpp in Sources */,
-				F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */,
-				F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */,
 				F7EAE7CA137D13EC006BFCDD /* ofxCvColorImage.cpp in Sources */,
 				F7EAE7CB137D13EC006BFCDD /* ofxCvContourFinder.cpp in Sources */,
 				F7EAE7CC137D13EC006BFCDD /* ofxCvFloatImage.cpp in Sources */,
