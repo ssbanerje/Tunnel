@@ -2,7 +2,7 @@
 
 //--------------------------------------------------------------
 void Application::setup() {
-    ofSetLogLevel(0);
+    ofSetLogLevel(OF_LOG_ERROR);
 	ofLog(OF_LOG_VERBOSE, "Application::setup()");
     
     m.initialize();
