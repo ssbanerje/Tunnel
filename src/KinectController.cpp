@@ -79,7 +79,7 @@ void KinectController::updateShip() {
         }
         float t = (b2->y - b1->y)/(b2->x - b1->x);
         float at = atan(t);
-        if(!isLeft(b1,b2) && isAbove(b1,b2))
+        /*if(!isLeft(b1,b2) && isAbove(b1,b2))
             if(trackingAngle<0)
                 at -= PI;
             else
@@ -88,7 +88,7 @@ void KinectController::updateShip() {
             if(trackingAngle<0)
                 at -= PI;
             else
-                at += PI;
+                at += PI;*/
         ship->setScaleSpeed((abs(b2->x-b1->x)+abs(b2->y-b1->y))/((kinect.width+kinect.height)*0.3));
         ship->setScaleRot(at/TWO_PI);
         trackingHands = true;

@@ -54,6 +54,7 @@
 		F73F617E137D1D5A00F71CFD /* KinectController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F73F617C137D1D5A00F71CFD /* KinectController.cpp */; };
 		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
 		F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = F74C06EA137CFD0700D957EB /* Courier New.ttf */; };
+		F7961784138AD48400F74282 /* BuildMath.cl in Copy Files */ = {isa = PBXBuildFile; fileRef = F71B2507138256C900883962 /* BuildMath.cl */; };
 		F7DEEA14137BD9FC0077048F /* ParticleSource.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA12137BD9FC0077048F /* ParticleSource.cpp */; };
 		F7DEEA17137BDB4C0077048F /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7DEEA15137BDB4C0077048F /* Particle.cpp */; };
 		F7EAE7C9137D13EC006BFCDD /* openCV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EAE7B7137D13EC006BFCDD /* openCV.a */; };
@@ -112,6 +113,7 @@
 			dstPath = ./data;
 			dstSubfolderSpec = 16;
 			files = (
+				F7961784138AD48400F74282 /* BuildMath.cl in Copy Files */,
 				F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */,
 				F727B8AD137A722B00AF4FE0 /* fighter1.3ds in Copy Files */,
 				F727B8AE137A722B00AF4FE0 /* psionic.jpg in Copy Files */,
