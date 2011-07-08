@@ -20,6 +20,7 @@ void Application::setup() {
     
     glLoadIdentity();
     
+    i.initialize(&m);
     tunnel.initialize(ofGetWidth(), ofGetHeight(), &m);
     ship.initialize(&m);
 }
@@ -31,6 +32,8 @@ void Application::draw() {
     ship.drawShip();
     
     ship.drawControlPanel();
+    
+    i.draw();
     
     //Draw FPS
     ofSetColor(255, 255, 255);

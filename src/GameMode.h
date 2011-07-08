@@ -1,7 +1,7 @@
 #ifndef __TUNNEL_GAMEMODE_INC
 #define __TUNNEL_GAMEMODE_INC
 
-#define GAME
+//#define GAME
 
 #ifdef GAME
     #define WINDOW_MODE OF_GAME_MODE

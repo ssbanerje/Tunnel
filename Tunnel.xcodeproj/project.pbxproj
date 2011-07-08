@@ -54,7 +54,7 @@
 		F727B8C0137A725800AF4FE0 /* ofx3dModelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F727B8BC137A725800AF4FE0 /* ofx3dModelLoader.cpp */; };
 		F7422C36137B0F4100C60705 /* GLUT.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = F7422C35137B0F4100C60705 /* GLUT.framework */; };
 		F74C06EB137CFD1A00D957EB /* Courier New.ttf in Copy Files */ = {isa = PBXBuildFile; fileRef = F74C06EA137CFD0700D957EB /* Courier New.ttf */; };
-		F78E314A138EDF58006884A6 /* Items.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78E3148138EDF58006884A6 /* Items.cpp */; };
+		F78E314A138EDF58006884A6 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F78E3148138EDF58006884A6 /* Item.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,8 +193,8 @@
 		F7422C35137B0F4100C60705 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../libs/glut/lib/osx/GLUT.framework; sourceTree = "<group>"; };
 		F74C06EA137CFD0700D957EB /* Courier New.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Courier New.ttf"; sourceTree = "<group>"; };
 		F74C06FE137D0F4C00D957EB /* GameMode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMode.h; sourceTree = "<group>"; };
-		F78E3148138EDF58006884A6 /* Items.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Items.cpp; sourceTree = "<group>"; };
-		F78E3149138EDF58006884A6 /* Items.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Items.h; sourceTree = "<group>"; };
+		F78E3148138EDF58006884A6 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		F78E3149138EDF58006884A6 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -667,8 +667,8 @@
 			children = (
 				F727B8A4137A71B300AF4FE0 /* Ship.cpp */,
 				F727B8A5137A71B300AF4FE0 /* Ship.h */,
-				F78E3148138EDF58006884A6 /* Items.cpp */,
-				F78E3149138EDF58006884A6 /* Items.h */,
+				F78E3148138EDF58006884A6 /* Item.cpp */,
+				F78E3149138EDF58006884A6 /* Item.h */,
 			);
 			name = Ship;
 			sourceTree = "<group>";
@@ -791,7 +791,7 @@
 				F71B24DE13824EF700883962 /* BuildMath.cl in Sources */,
 				F71B24F0138251B500883962 /* Color.cpp in Sources */,
 				F71B24F1138251B500883962 /* MSACoreGL.cpp in Sources */,
-				F78E314A138EDF58006884A6 /* Items.cpp in Sources */,
+				F78E314A138EDF58006884A6 /* Item.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +861,7 @@
 				GCC_MODEL_TUNING = G4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -987,6 +988,7 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
@@ -1041,6 +1043,7 @@
 				GCC_MODEL_TUNING = G4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Carbon.framework/Headers/Carbon.h";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (

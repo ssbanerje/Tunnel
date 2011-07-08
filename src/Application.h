@@ -7,6 +7,7 @@
 #include "Tunnel.h"
 #include "LookupMath.h"
 #include "Ship.h"
+#include "Item.h"
 
 class Application : public ofBaseApp {
 public:
@@ -25,6 +26,7 @@ private:
     LookupMath m;
     Tunnel tunnel;
     Ship ship;
+    Item i;
 };
 
 #endif
